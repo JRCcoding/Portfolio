@@ -9,12 +9,12 @@ const About = () => {
     <div className='mb-20 pt-20 mx-20 md:mx-60 xl:mx-80 text-white' id='about'>
       <Icon
         icon='line-md:coffee-twotone-loop'
-        className='inline text-white w-20 h-20  mb-5'
+        className='inline text-white w-20 h-20 mb-5 mx-20'
       />
-      <h1 className='inline md:pt-4 tracking-tight md:tracking-normal'>
+      <h1 className='block md:inline ml-7 md:ml-0 md:pt-4 tracking-tight md:tracking-normal'>
         Josh Claxton
       </h1>
-      <p className='-mt-5 text-lg'>
+      <p className='-mt-5 pt-10 text-lg'>
         I love to build beautifully functional websites and applications.
         <br></br>
         Connect with me and let's make some magic!
