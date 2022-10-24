@@ -10,19 +10,20 @@ import {
   MDBCollapse,
 } from 'mdb-react-ui-kit'
 import { Icon } from '@iconify/react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export default function Navi() {
-  const [showBasic, setShowBasic] = useState(false)
+  // const [showBasic, setShowBasic] = useState(false)
 
   return (
     <MDBNavbar expand='sm' light className='mb-10 bg-black'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#' className='ml-40 text-white'>
           jrcCode
+          <Icon icon='bx:code-alt' className='inline text-white w-5 h-5' />
         </MDBNavbarBrand>
 
-        <MDBNavbarToggler
+        {/* <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
           aria-expanded='false'
           aria-label='Toggle navigation'
@@ -54,7 +55,7 @@ export default function Navi() {
               </MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
-        </MDBCollapse>
+        </MDBCollapse> */}
       </MDBContainer>
     </MDBNavbar>
   )
