@@ -13,7 +13,6 @@ module.exports = {
       blue: '#17BEBB',
       yellow: '#ffc914',
       green: '#76B041',
-      black: '#2E282A',
       graydark: '#191b1f',
       white: '#EAEAEA',
     },

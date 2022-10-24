@@ -18,7 +18,7 @@ export default function Navi() {
   return (
     <MDBNavbar expand='sm' light className='mb-10 bg-black'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#' className='mx-8 text-white'>
+        <MDBNavbarBrand href='#' className='mx-40 text-white'>
           jrcCode
         </MDBNavbarBrand>
 
