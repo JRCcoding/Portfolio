@@ -18,7 +18,7 @@ export default function Navi() {
   return (
     <MDBNavbar expand='sm' light className='mb-10 bg-black'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#' className='mx-40 text-white'>
+        <MDBNavbarBrand href='#' className='ml-40 text-white'>
           jrcCode
         </MDBNavbarBrand>
 
@@ -27,7 +27,6 @@ export default function Navi() {
           aria-expanded='false'
           aria-label='Toggle navigation'
           onClick={() => setShowBasic(!showBasic)}
-          className='collapse'
         >
           <Icon icon='bytesize:menu' className='text-white' />
         </MDBNavbarToggler>

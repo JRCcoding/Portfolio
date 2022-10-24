@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Icon } from '@iconify/react'
 import computer from '../images/computer.png'
+import Button from 'react-bootstrap/Button'
 
 const About = () => {
   return (
@@ -18,6 +19,8 @@ const About = () => {
         <br></br>
         Connect with me and let's make some magic!
       </p>
+      <Button variant='success'>Contact me!</Button>
+
       <img
         className='w-25 h-50 absolute top-10 right-20 mr-80'
         src={computer}
