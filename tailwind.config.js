@@ -9,10 +9,12 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
-      'green-dark': '#2D8731',
-      'green-light': '#64CE69',
-      'green-fade': '#B8FABB',
-      black: '#0A220B',
+      flame: '#E4572E',
+      blue: '#17BEBB',
+      yellow: '#ffc914',
+      green: '#76B041',
+      black: '#2E282A',
+      graydark: '#191b1f',
       white: '#EAEAEA',
     },
     fontFamily: {

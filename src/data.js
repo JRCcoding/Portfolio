@@ -1,6 +1,6 @@
 export const skills = [
-  'HTML',
-  'CSS',
+  'HTML5',
+  'CSS3',
   'Responsive Web Design',
   'Node.js',
   'MongoDB',
