@@ -5,12 +5,14 @@ import computer from '../images/computer.png'
 
 const About = () => {
   return (
-    <div className='mb-20 pt-20 mx-80 text-white' id='about'>
+    <div className='mb-20 pt-20 mx-20 md:mx-80 text-white' id='about'>
       <Icon
         icon='line-md:coffee-twotone-loop'
         className='inline text-white w-20 h-20  mb-5'
       />
-      <h1 className='inline pt-4'>Josh Claxton</h1>
+      <h1 className='inline md:pt-4 tracking-tight md:tracking-normal'>
+        Josh Claxton
+      </h1>
       <p className='-mt-5 text-lg'>
         I love to build beautifully functional websites and applications.
         <br></br>
