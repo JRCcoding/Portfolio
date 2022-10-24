@@ -27,6 +27,7 @@ export default function Navi() {
           aria-expanded='false'
           aria-label='Toggle navigation'
           onClick={() => setShowBasic(!showBasic)}
+          className='collapse'
         >
           <Icon icon='bytesize:menu' className='text-white' />
         </MDBNavbarToggler>
