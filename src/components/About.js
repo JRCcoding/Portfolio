@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { Icon } from '@iconify/react'
-import computer from '../images/computer.png'
+// import computer from '../images/computer.png'
 import Button from 'react-bootstrap/Button'
 
 const About = () => {
   return (
-    <div className='mb-20 pt-20 mx-20 md:mx-80 text-white' id='about'>
+    <div className='mb-20 pt-20 mx-20 md:mx-60 xl:mx-80 text-white' id='about'>
       <Icon
         icon='line-md:coffee-twotone-loop'
         className='inline text-white w-20 h-20  mb-5'
@@ -19,13 +19,15 @@ const About = () => {
         <br></br>
         Connect with me and let's make some magic!
       </p>
-      <Button variant='success'>Contact me!</Button>
+      <Button variant='success' className='inline'>
+        Contact me!
+      </Button>
 
-      <img
-        className='w-25 h-50 absolute top-10 right-20 mr-80'
+      {/* <img
+        className='w-50 h-50  absolute right-0 xl:top-10 lg:right-0 top-60 xl:right-10 '
         src={computer}
         alt='computer'
-      ></img>
+      ></img> */}
 
       <Icon
         icon='bx:code-alt'
