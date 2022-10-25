@@ -14,8 +14,8 @@ const About = () => {
       <h1 className='block md:inline ml-7 md:ml-0 md:pt-4 tracking-tight md:tracking-normal'>
         Josh Claxton
       </h1>
-      <p className='-mt-5 pt-10 text-lg'>
-        I love to build beautifully functional websites and applications.
+      <p className='-mt-5 pt-10 text-lg text-center'>
+        I love to build beautifully functional websites.
         <br></br>
         Connect with me and let's make some magic!
       </p>
