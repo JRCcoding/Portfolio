@@ -7,7 +7,7 @@ export const skills = [
   'Material Design',
 ]
 
-export const work = [
+export const projects = [
   {
     title: 'Kaitlyn King',
     subtitle: 'Develop/Design',

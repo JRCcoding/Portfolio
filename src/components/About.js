@@ -18,7 +18,7 @@ const About = () => {
               <h1 className='inline mx-0 md:inline tracking-tight md:tracking-normal'>
                 Josh Claxton
               </h1>
-              <p className='-mt-5 pt-10 text-xl text-center md:text-left'>
+              <p className='-mt-5 pt-10 text-xl text-left md:text-left'>
                 I love to build beautifully functional websites.
                 <br></br>
                 Connect with me and let's make some magic!
