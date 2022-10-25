@@ -6,10 +6,10 @@ import Button from 'react-bootstrap/Button'
 
 const About = () => {
   return (
-    <div className='mb-20 pt-20 mx-20 md:mx-60 xl:mx-80 text-white' id='about'>
+    <div className='mb-20 pt-20 ml-40 md:mx-60 xl:mx-80 text-white' id='about'>
       <Icon
         icon='line-md:coffee-twotone-loop'
-        className='inline text-white w-20 h-20 mb-5 mx-20'
+        className='inline text-white w-20 h-20 mb-5 mx-40'
       />
       <h1 className='block md:inline ml-7 md:ml-0 md:pt-4 tracking-tight md:tracking-normal'>
         Josh Claxton
@@ -19,7 +19,7 @@ const About = () => {
         <br></br>
         Connect with me and let's make some magic!
       </p>
-      <Button variant='success' className='inline'>
+      <Button variant='success' className='inline ml-80'>
         Contact me!
       </Button>
 
