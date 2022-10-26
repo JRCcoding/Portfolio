@@ -3,7 +3,7 @@ import { projects } from '../data'
 
 export default function Projects() {
   return (
-    <section className='text-gray-400 bg-gray-900 body-font mt-60'>
+    <section className='text-gray-400 bg-gray-900 body-font my-60' id='work'>
       <div className='container px-5 py-10 mx-auto text-center lg:px-40'>
         <div className='flex flex-col w-full mb-20'>
           <div className='text-white'>

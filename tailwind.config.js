@@ -3,7 +3,7 @@ module.exports = {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
     screens: {
-      sm: '480px',
+      sm: '20px',
       md: '768px',
       lg: '976px',
       xl: '1440px',
@@ -14,6 +14,7 @@ module.exports = {
       yellow: '#ffc914',
       green: '#76B041',
       graydark: '#191b1f',
+      offwhite: '#e6e6e6',
       white: '#EAEAEA',
     },
     fontFamily: {

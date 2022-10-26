@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 
 const Skills = () => {
   return (
-    <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2'>
+    <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 '>
       {skills.map((skill) => (
         <div key={skill} className='p-2 sm:w-1/2 w-full'>
           <div className='rounded flex p-4 h-full items-center border bg-black'>
@@ -16,7 +16,6 @@ const Skills = () => {
           </div>
         </div>
       ))}
-      <span id='work'></span>
     </div>
   )
 }
