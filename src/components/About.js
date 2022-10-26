@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Container>
       <Container>
-        <div className='text-white' id='about'>
+        <div className='text-white mt-60 mb-20' id='about'>
           <div className='flex place-content-between'>
             <div className='ml-10 mt-10'>
               <Icon
@@ -36,7 +36,7 @@ const About = () => {
 
           <Icon
             icon='bx:code-alt'
-            className='content-center text-white w-20 h-20 mx-auto mt-40'
+            className='content-center text-white w-20 h-20 mx-auto mt-80'
           />
           <h1 className='text-center'>Skills</h1>
         </div>

@@ -3,7 +3,10 @@ import { projects } from '../data'
 
 export default function Projects() {
   return (
-    <section id='projects' className='text-gray-400 bg-gray-900 body-font'>
+    <section
+      id='projects'
+      className='text-gray-400 bg-gray-900 body-font mt-60'
+    >
       <div className='container px-5 py-10 mx-auto text-center lg:px-40'>
         <div className='flex flex-col w-full mb-20'>
           <div className='text-white'>
@@ -31,7 +34,7 @@ export default function Projects() {
                   <img
                     alt='gallery'
                     className='absolute inset-0 w-full h-full object-cover object-center'
-                    // src={project.image}
+                    src={project.image}
                   />
                   <div className='px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100'>
                     <h2 className='tracking-widest text-sm title-font font-medium text-white mb-1'>
