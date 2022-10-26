@@ -13,11 +13,7 @@ export const projects = [
     subtitle: 'Develop/Design',
     description:
       'Website for the wonderful Kaitlyn King, nice informational with good looks and functionality.',
-    image: '../images/kaitlyn.png',
+    image: './images/kaitlyn.png',
     link: 'https://jrccoding.github.io/KaitlynKing1.0/',
   },
-  {},
-  {},
-  {},
-  {},
 ]

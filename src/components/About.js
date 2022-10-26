@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Icon } from '@iconify/react'
 import computer from '../images/computer.png'
 import { Button, Container } from 'react-bootstrap'
@@ -10,7 +9,7 @@ const About = () => {
       <Container>
         <div className='text-white' id='about'>
           <div className='flex place-content-between'>
-            <div className='ml-10'>
+            <div className='ml-10 mt-10'>
               <Icon
                 icon='line-md:coffee-twotone-loop'
                 className='inline text-white w-20 h-20 mx-0'
