@@ -16,6 +16,7 @@ const Skills = () => {
           </div>
         </div>
       ))}
+      <span id='work'></span>
     </div>
   )
 }

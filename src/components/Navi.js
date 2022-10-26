@@ -18,7 +18,7 @@ export default function Navi() {
   return (
     <MDBNavbar expand='xxl' light className='mb-10 bg-black sticky-top'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#' className='lg:mx-20 text-white'>
+        <MDBNavbarBrand href='#' className='lg:mx-40 pr-20 text-white'>
           jrcCode
           <Icon icon='bx:code-alt' className='inline text-white w-5 h-5' />
         </MDBNavbarBrand>
@@ -33,7 +33,7 @@ export default function Navi() {
         </MDBNavbarToggler>
   */}
 
-        <MDBNavbarNav className=''>
+        <MDBNavbarNav className='divide-x'>
           <MDBNavbarItem>
             <MDBNavbarLink href='#skills' className='text-white'>
               Skills
