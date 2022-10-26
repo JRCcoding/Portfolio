@@ -1,4 +1,4 @@
-import kaitlynimage from './images/kaitlyn.png'
+// import kaitlynimage from './images/kaitlyn.png'
 
 export const skills = [
   'HTML5',
@@ -15,7 +15,7 @@ export const projects = [
     subtitle: 'Develop and Design',
     description:
       'Website for the wonderful Kaitlyn King, nice informational with good looks and functionality.',
-    image: { kaitlynimage },
+    image: './kaitlyn.png',
     link: 'https://jrccoding.github.io/KaitlynKing1.0/',
   },
 ]
