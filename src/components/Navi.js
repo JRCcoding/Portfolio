@@ -16,7 +16,7 @@ export default function Navi() {
   // const [showBasic, setShowBasic] = useState(false)
 
   return (
-    <MDBNavbar expand='xxl' light className='mb-10 bg-black'>
+    <MDBNavbar expand='xxl' light className='mb-10 bg-black sticky-top'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#' className='lg:mx-20 text-white'>
           jrcCode

@@ -37,6 +37,7 @@ const About = () => {
           <Icon
             icon='bx:code-alt'
             className='content-center text-white w-20 h-20 mx-auto mt-80'
+            id='skills'
           />
           <h1 className='text-center'>Skills</h1>
         </div>
