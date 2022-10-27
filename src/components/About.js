@@ -36,8 +36,8 @@ const About = () => {
           <span id='skills'></span>
           <Icon
             icon='bx:code-alt'
-            className='content-center text-white w-20 h-20 mx-auto mt-80'
-          />
+            className='content-center text-white w-20 h-20 mx-auto mt-20'
+          />{' '}
           <h1 className='text-center'>Skills</h1>
         </div>
       </Container>

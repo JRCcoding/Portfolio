@@ -3,11 +3,11 @@ import { projects } from '../data'
 
 export default function Projects() {
   return (
-    <section className='text-gray-400 bg-gray-900 body-font my-60' id='work'>
+    <section className='text-gray-400 bg-gray-900 body-font my-60'>
       <div className='container px-5 py-10 mx-auto text-center lg:px-40'>
         <div className='flex flex-col w-full mb-20'>
           <div className='text-white'>
-            <div className='title'>
+            <div className='title' id='work'>
               <Icon
                 icon='bx:code-alt'
                 className='content-center text-white w-20 h-20 mx-auto mt-40'
