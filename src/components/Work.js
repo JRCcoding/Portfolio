@@ -14,13 +14,13 @@ export default function Projects() {
               />
               <h1 className='text-center text-white'>Work</h1>
             </div>
-            <p className='lg:w-2/3 leading-relaxed text-base mx-60'>
+            <p className='lg:w-2/3 leading-relaxed text-base lg:mx-60'>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Explicabo facilis repellat ab cupiditate alias vero aliquid
               obcaecati quisquam fuga dolore.
             </p>
           </div>
-          <div className='flex flex-wrap -m-4'>
+          <div className='flex flex-wrap -m-4 lg:mx-60'>
             {projects.map((project) => (
               <a
                 href={project.link}

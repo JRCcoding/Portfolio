@@ -71,12 +71,7 @@ export default function App() {
   const [showNav, setShowNav] = useState(false)
 
   return (
-    <MDBNavbar
-      expand='lg'
-      dark
-      // bgColor='light'
-      className='bg-black text-white'
-    >
+    <MDBNavbar expand='lg' dark className='bg-black text-white'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#' className='text-white'>
           jrcCode
@@ -91,7 +86,7 @@ export default function App() {
           <Icon icon='bytesize:menu' className='text-white' />
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNav}>
-          <MDBNavbarNav className='lg:divide-x collapse'>
+          <MDBNavbarNav className='lg:divide-x text-white'>
             <MDBNavbarItem>
               <MDBNavbarLink href='#skills'>Skills</MDBNavbarLink>
             </MDBNavbarItem>
