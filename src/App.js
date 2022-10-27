@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div className='App bg-graydark'>
+    <div className='App bg-graydark overflow-hidden'>
       <Navi />
       <About />
       <Skills />

@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap'
 
 const About = () => {
   return (
-    <div className='text-white mt-40 lg:mt-60' id='about'>
+    <div className='text-white mt-20 lg:mt-60' id='about'>
       <div className='flex'>
         <div className='mt-10 mx-10 lg:mx-80'>
           <Icon
