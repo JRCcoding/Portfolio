@@ -7,7 +7,7 @@ const Skills = () => {
     <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 '>
       {skills.map((skill) => (
         <div key={skill} className='p-2 sm:w-1/2 w-full'>
-          <div className='rounded flex p-4 h-full items-center border bg-black'>
+          <div className='rounded flex p-4  items-center border bg-black'>
             <Icon
               icon='heroicons-outline:badge-check'
               className='text-white w-6 h-6 flex-shrink-0 mr-4'

@@ -73,9 +73,9 @@ export default function App() {
   return (
     <MDBNavbar
       expand='lg'
-      light
+      dark
       // bgColor='light'
-      className='sticky-top opacity-90 bg-black text-white'
+      className='sticky-top bg-black text-white'
     >
       <MDBContainer fluid>
         <MDBNavbarBrand href='#' className='text-white'>
@@ -91,16 +91,12 @@ export default function App() {
           <Icon icon='bytesize:menu' className='text-white' />
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNav}>
-          <MDBNavbarNav className='divide-x text-white'>
+          <MDBNavbarNav className='divide-x'>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#skills' className='text-white'>
-                Skills
-              </MDBNavbarLink>
+              <MDBNavbarLink href='#skills'>Skills</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#work' className='text-white'>
-                Work
-              </MDBNavbarLink>
+              <MDBNavbarLink href='#work'>Work</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink
@@ -108,7 +104,6 @@ export default function App() {
                 href='#'
                 tabIndex={-1}
                 aria-disabled='true'
-                className='text-white'
               >
                 Contact
               </MDBNavbarLink>
