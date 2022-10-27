@@ -4,8 +4,8 @@ import { projects } from '../data'
 export default function Projects() {
   return (
     <section className='text-gray-400 bg-gray-900 body-font my-60'>
-      <div className='lg:container py-10 text-center lg:px-40'>
-        <div className='flex flex-col w-full mb-20'>
+      <div className=' py-10 text-center lg:px-40'>
+        <div className='flex flex-col w-full mb-20 mx-auto'>
           <div className='text-white'>
             <div className='title' id='work'>
               <Icon
@@ -14,7 +14,7 @@ export default function Projects() {
               />
               <h1 className='text-center text-white'>Work</h1>
             </div>
-            <p className='lg:w-2/3 leading-relaxed text-base'>
+            <p className='lg:w-2/3 leading-relaxed text-base mx-60'>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Explicabo facilis repellat ab cupiditate alias vero aliquid
               obcaecati quisquam fuga dolore.

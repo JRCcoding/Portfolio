@@ -5,14 +5,14 @@ import { Container } from 'react-bootstrap'
 
 const About = () => {
   return (
-    <div className='lg:container text-white mt-40 lg:mt-60' id='about'>
-      <div className='flex place-content-between'>
-        <div className='mt-10 mx-10'>
+    <div className='text-white mt-40 lg:mt-60' id='about'>
+      <div className='flex'>
+        <div className='mt-10 mx-10 lg:mx-80'>
           <Icon
             icon='line-md:coffee-twotone-loop'
-            className='inline text-light w-20 h-20 mx-0'
+            className='inline text-white w-20 h-20 mx-0'
           />
-          <h1 className='inline ml-10 md:inline tracking-tight md:tracking-normal'>
+          <h1 className='inline ml-10 lg:text-4xl md:inline tracking-tight md:tracking-normal'>
             Josh Claxton
           </h1>
           <p className='-mt-5 pt-10 text-xl text-left md:text-left'>
