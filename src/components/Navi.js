@@ -54,57 +54,56 @@
 //   )
 // }
 
-import React, { useState } from 'react'
+import React from 'react'
 import {
   MDBContainer,
   MDBNavbar,
   MDBNavbarBrand,
-  MDBNavbarToggler,
+  // MDBNavbarToggler,
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBCollapse,
+  // MDBCollapse,
 } from 'mdb-react-ui-kit'
 import { Icon } from '@iconify/react'
 
 export default function App() {
-  const [showNav, setShowNav] = useState(false)
+  // const [showNav, setShowNav] = useState(false)
 
   return (
-    <MDBNavbar expand='lg' dark className='bg-black text-white'>
+    <MDBNavbar dark className='bg-black text-white lg:scale-125'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#' className='text-white'>
+        <MDBNavbarBrand href='#' className='text-white mx-auto scale-125'>
           jrcCode
           <Icon icon='bx:code-alt' className='inline text-white w-5 h-5' />
         </MDBNavbarBrand>
-        <MDBNavbarToggler
+        {/* <MDBNavbarToggler
           type='button'
           aria-expanded='false'
           aria-label='Toggle navigation'
           onClick={() => setShowNav(!showNav)}
         >
           <Icon icon='bytesize:menu' className='text-white' />
-        </MDBNavbarToggler>
-        <MDBCollapse navbar show={showNav}>
-          <MDBNavbarNav className='lg:divide-x text-white'>
-            <MDBNavbarItem>
-              <MDBNavbarLink href='#skills'>Skills</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href='#work'>Work</MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink
-                disabled
-                href='#'
-                tabIndex={-1}
-                aria-disabled='true'
-              >
-                Contact
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-          </MDBNavbarNav>
-        </MDBCollapse>
+        </MDBNavbarToggler> */}
+        {/* <MDBCollapse navbar show={showNav}> */}
+        <MDBNavbarNav className='lg:divide-x text-white text-lg inline flex flex-row place-content-center'>
+          <MDBNavbarItem>
+            <MDBNavbarLink href='#skills'>
+              &nbsp;&nbsp;Skills&nbsp;&nbsp;
+            </MDBNavbarLink>
+          </MDBNavbarItem>
+          <MDBNavbarItem>
+            <MDBNavbarLink href='#work'>
+              &nbsp;&nbsp;Work&nbsp;&nbsp;
+            </MDBNavbarLink>
+          </MDBNavbarItem>
+          <MDBNavbarItem>
+            <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
+              &nbsp;&nbsp;Contact&nbsp;&nbsp;
+            </MDBNavbarLink>
+          </MDBNavbarItem>
+        </MDBNavbarNav>
+        {/* </MDBCollapse> */}
       </MDBContainer>
     </MDBNavbar>
   )
