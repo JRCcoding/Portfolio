@@ -91,7 +91,7 @@ export default function App() {
           <Icon icon='bytesize:menu' className='text-white' />
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNav}>
-          <MDBNavbarNav className='divide-x'>
+          <MDBNavbarNav className='lg:divide-x'>
             <MDBNavbarItem>
               <MDBNavbarLink href='#skills'>Skills</MDBNavbarLink>
             </MDBNavbarItem>
