@@ -75,7 +75,7 @@ export default function App() {
       expand='lg'
       dark
       // bgColor='light'
-      className='sticky-top bg-black text-white'
+      className='bg-black text-white'
     >
       <MDBContainer fluid>
         <MDBNavbarBrand href='#' className='text-white'>
