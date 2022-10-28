@@ -3,13 +3,15 @@ import { Icon } from '@iconify/react'
 
 const Contact = () => {
   return (
-    <div className='no-underline text-white visited:text-white hover:text-white container '>
+    <div className='no-underline text-white visited:text-white hover:text-white container mb-40'>
       <Icon
         icon='bx:code-alt'
-        className='content-center text-white w-20 h-20 mx-auto mt-80'
+        className='content-center text-white w-20 h-20 mx-auto'
         id='skills'
       />
-      <h1 className='text-center text-white'>Contact</h1>
+      <h1 className='text-center text-white' id='contact'>
+        Contact
+      </h1>
       <p className='text-center'>
         There are many ways to contact me but here are the best options!
       </p>
