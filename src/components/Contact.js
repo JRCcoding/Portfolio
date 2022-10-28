@@ -50,7 +50,7 @@ const Contact = () => {
             (432)425-2593
           </a>
         </li>
-        <li className='text-center'>
+        {/* <li className='text-center'>
           <a
             href='#'
             className='text-2xl no-underline text-white visited:text-white hover:text-green'
@@ -67,7 +67,7 @@ const Contact = () => {
             <Icon icon='akar-icons:whatsapp-fill' className='inline' />
             What'sApp
           </a>
-        </li>
+        </li> */}
       </ul>
     </div>
   )
