@@ -4,6 +4,7 @@ import About from './components/About'
 import Skills from './components/Skills'
 // import Work from './components/Work'
 import Contact from './components/Contact'
+import ScrollButton from './components/ScrollButton'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Skills />
       {/* <Work /> */}
       <Contact />
+      <ScrollButton />
     </div>
   )
 }
