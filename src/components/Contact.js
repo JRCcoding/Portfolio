@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react'
 
 const Contact = () => {
   return (
-    <div className='no-underline text-white visited:text-white hover:text-white container mb-40'>
+    <div className='no-underline text-white visited:text-white hover:text-white container'>
       <Icon
         icon='bx:code-alt'
         className='content-center text-white w-20 h-20 mx-auto'
