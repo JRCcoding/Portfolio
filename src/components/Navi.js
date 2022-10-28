@@ -58,7 +58,7 @@ import React from 'react'
 import {
   MDBContainer,
   MDBNavbar,
-  MDBNavbarBrand,
+  // MDBNavbarBrand,
   // MDBNavbarToggler,
   MDBNavbarNav,
   MDBNavbarItem,
