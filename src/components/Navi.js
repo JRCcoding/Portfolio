@@ -73,10 +73,10 @@ export default function App() {
   return (
     <MDBNavbar dark className='bg-black text-white lg:scale-125'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#' className='text-white mx-auto scale-125'>
+        {/* <MDBNavbarBrand href='#' className='text-white mx-auto scale-125'>
           jrcCode
           <Icon icon='bx:code-alt' className='inline text-white w-5 h-5' />
-        </MDBNavbarBrand>
+        </MDBNavbarBrand> */}
         {/* <MDBNavbarToggler
           type='button'
           aria-expanded='false'
@@ -86,7 +86,9 @@ export default function App() {
           <Icon icon='bytesize:menu' className='text-white' />
         </MDBNavbarToggler> */}
         {/* <MDBCollapse navbar show={showNav}> */}
-        <MDBNavbarNav className='divide-x text-white text-lg inline flex flex-row place-content-center'>
+        <MDBNavbarNav className='text-white text-lg inline flex flex-row place-content-center'>
+          <Icon icon='bx:code-alt' className='text-white w-5 h-5 mt-2.5' />
+
           <MDBNavbarItem>
             <MDBNavbarLink href='#skills'>
               &nbsp;&nbsp;Skills&nbsp;&nbsp;

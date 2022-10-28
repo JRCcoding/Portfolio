@@ -6,7 +6,7 @@ import computer from '../images/computer.png'
 const About = () => {
   return (
     <div className='text-white mt-20 lg:mt-60' id='about'>
-      <div className='flex'>
+      <div className='flex sm:flex-col lg:flex-row'>
         <div className='mt-10 mx-10 lg:mx-80'>
           <Icon
             icon='line-md:coffee-twotone-loop'
@@ -26,7 +26,7 @@ const About = () => {
         </div>
 
         <img
-          className='max-w-md -mt-20  hidden lg:block'
+          className='max-w-md mt-20 lg:mt-0'
           src={computer}
           alt='computer'
         ></img>
