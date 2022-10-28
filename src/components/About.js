@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
 import computer from '../images/computer.png'
-import { Container } from 'react-bootstrap'
+// import { Container } from 'react-bootstrap'
 
 const About = () => {
   return (
@@ -31,10 +31,11 @@ const About = () => {
           alt='computer'
         ></img>
       </div>
-      <span id='skills'></span>
+      {/* <span id='skills'></span> */}
       <Icon
         icon='bx:code-alt'
         className='content-center text-white w-20 h-20 mx-auto mt-80'
+        id='skills'
       />{' '}
       <h1 className='text-center'>Skills</h1>
     </div>

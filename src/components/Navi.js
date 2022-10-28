@@ -86,19 +86,19 @@ export default function App() {
           <Icon icon='bytesize:menu' className='text-white' />
         </MDBNavbarToggler> */}
         {/* <MDBCollapse navbar show={showNav}> */}
-        <MDBNavbarNav className='lg:divide-x text-white text-lg inline flex flex-row place-content-center'>
+        <MDBNavbarNav className='divide-x text-white text-lg inline flex flex-row place-content-center'>
           <MDBNavbarItem>
             <MDBNavbarLink href='#skills'>
               &nbsp;&nbsp;Skills&nbsp;&nbsp;
             </MDBNavbarLink>
           </MDBNavbarItem>
-          <MDBNavbarItem>
+          {/* <MDBNavbarItem>
             <MDBNavbarLink href='#work'>
               &nbsp;&nbsp;Work&nbsp;&nbsp;
             </MDBNavbarLink>
-          </MDBNavbarItem>
+          </MDBNavbarItem> */}
           <MDBNavbarItem>
-            <MDBNavbarLink disabled href='#' tabIndex={-1} aria-disabled='true'>
+            <MDBNavbarLink href='#contact'>
               &nbsp;&nbsp;Contact&nbsp;&nbsp;
             </MDBNavbarLink>
           </MDBNavbarItem>
