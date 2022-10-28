@@ -9,10 +9,11 @@ const About = () => {
       <div className='flex sm:flex-col lg:flex-row'>
         <div className='mt-10 mx-10 lg:mx-80'>
           <Icon
-            icon='line-md:coffee-twotone-loop'
+            // icon='line-md:coffee-twotone-loop'
+            icon='logos:create-react-app'
             className='inline text-white w-20 h-20 mx-0'
           />
-          <h1 className='inline ml-10 lg:text-4xl md:inline tracking-tight md:tracking-normal'>
+          <h1 className='inline ml-10 lg:text-4xl tracking-tight md:tracking-normal'>
             Josh Claxton
           </h1>
           <p className='-mt-5 pt-10 text-xl text-left md:text-left'>
