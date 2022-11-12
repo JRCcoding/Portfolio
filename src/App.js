@@ -11,6 +11,7 @@ function App() {
   return (
     <div className='App bg-graydark overflow-hidden  '>
       <Navi />
+
       <About />
       <Skills />
       {/* <Work /> */}
