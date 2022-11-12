@@ -3,6 +3,7 @@ import { Icon } from '@iconify/react'
 import computer from '../images/computer.png'
 // import { Container } from 'react-bootstrap'
 import 'animate.css'
+import './About.css'
 
 const About = () => {
   return (
@@ -31,7 +32,7 @@ const About = () => {
         </div>
 
         <img
-          className='max-w-md mt-10 lg:mt-0 sm:-mt-20'
+          className='max-w-md mt-10 lg:mt-0 sm:-mt-20 computer'
           src={computer}
           alt='computer'
         ></img>
