@@ -1,15 +1,15 @@
 import React from 'react'
 import { skills } from '../data'
 import { Icon } from '@iconify/react'
-import 'animate.css/animate.css'
-import ScrollAnimation from 'react-animate-on-scroll'
+import 'animate.css'
+import Fade from 'react-reveal/Fade'
 
 const Skills = () => {
   return (
-    <ScrollAnimation animateIn='fadeInLeft'>
-      <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-80'>
-        {skills.map((skill) => (
-          <div key={skill} className='p-2 sm:w-1/2 w-full'>
+    <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-80'>
+      {skills.map((skill) => (
+        <div key={skill} className='p-2 sm:w-1/2 w-full'>
+          <Fade left>
             <div className='rounded flex p-4 items-center border bg-black'>
               <Icon
                 icon='heroicons-outline:badge-check '
@@ -17,10 +17,10 @@ const Skills = () => {
               />
               <span className='title-font font-medium text-white'>{skill}</span>
             </div>
-          </div>
-        ))}
-      </div>
-    </ScrollAnimation>
+          </Fade>
+        </div>
+      ))}
+    </div>
   )
 }
 

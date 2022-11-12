@@ -20,7 +20,7 @@ const About = () => {
           <h1 className='inline ml-10 lg:text-4xl tracking-tight md:tracking-normal'>
             J. Claxton
           </h1>
-          <p className='-mt-5 pt-10 text-xl text-left md:text-left'>
+          <p className='-mt-5 pt-10 text-xl text-left md:text-left mb-80'>
             I love to build beautifully functional websites.
             <br></br>
             Connect with me and let's make some magic!
