@@ -11,7 +11,7 @@ const About = () => {
       id='about'
     >
       <div className='flex sm:flex-col-reverse lg:flex-row md:ml-60 lg:ml-0'>
-        <div className='mt-10 mx-10 lg:mx-80'>
+        <div className='sm:-mt-10 lg:mt-20 mx-10 lg:mx-80'>
           <Icon
             // icon='line-md:coffee-twotone-loop'
             icon='logos:create-react-app'
@@ -31,7 +31,7 @@ const About = () => {
         </div>
 
         <img
-          className='max-w-md mt-20 lg:mt-0 sm:-mt-10'
+          className='max-w-md mt-10 lg:mt-0 sm:-mt-20'
           src={computer}
           alt='computer'
         ></img>
