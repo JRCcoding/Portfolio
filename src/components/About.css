@@ -2,3 +2,6 @@
     height: 500px;
     width: 700px;
 }
+.animate__animated.animate__fadeIn {
+    --animate-duration: 5s;
+  }
