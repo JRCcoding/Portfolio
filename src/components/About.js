@@ -6,7 +6,7 @@ import computer from '../images/computer.png'
 const About = () => {
   return (
     <div className='text-white mt-20 lg:mt-60' id='about'>
-      <div className='flex sm:flex-col lg:flex-row'>
+      <div className='flex sm:flex-col-reverse lg:flex-row '>
         <div className='mt-10 mx-10 lg:mx-80'>
           <Icon
             // icon='line-md:coffee-twotone-loop'
@@ -14,7 +14,7 @@ const About = () => {
             className='inline text-white w-20 h-20 mx-0'
           />
           <h1 className='inline ml-10 lg:text-4xl tracking-tight md:tracking-normal'>
-            Josh Claxton
+            Josh Claxton -
           </h1>
           <p className='-mt-5 pt-10 text-xl text-left md:text-left'>
             I love to build beautifully functional websites.
@@ -27,7 +27,7 @@ const About = () => {
         </div>
 
         <img
-          className='max-w-md mt-20 lg:mt-0'
+          className='max-w-md mt-20 lg:mt-0 sm:-mt-10'
           src={computer}
           alt='computer'
         ></img>
