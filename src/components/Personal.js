@@ -20,14 +20,17 @@ const Personal = () => {
               src={face}
               alt='Josh Claxton'
               className='-mt-40 mb-40 mx-auto'
+              id='about'
             ></img>
           </Rotate>
-          <p className='text-white text-xl col-4'>
-            <strong className='text-2xl'>Josh Claxton - </strong>I am a Web
-            Developer, Graphic Designer, father of 3 beautiful children, and
-            husband to the best wife in the world.
+          <h1 className='scale-150 mx-auto -mt-20 text-[rgb(0,175,145)]'>
+            Josh Claxton
+          </h1>
+          <p className='text-white text-2xl sm:col-2 mx-auto text-center'>
+            I am a Web Developer, Graphic Designer, father of 3 beautiful
+            children, and husband to the best wife in the world.
           </p>
-          <p className='text-white text-xl col-4 ml-20'>
+          <p className='text-white text-xl sm:col-2 lg:ml-20 lg:mr-40 sm:mx-10'>
             I don't usually say too much about myself but will be sure to fill
             you all in with more information soon!
           </p>
