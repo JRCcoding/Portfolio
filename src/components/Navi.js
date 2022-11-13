@@ -90,12 +90,6 @@ export default function App() {
           <a href='/'>
             <Icon icon='bx:code-alt' className='text-white w-5 h-5 mt-2.5' />
           </a>
-
-          <MDBNavbarItem>
-            <MDBNavbarLink href='#personal'>
-              &nbsp;&nbsp;About&nbsp;&nbsp;
-            </MDBNavbarLink>
-          </MDBNavbarItem>
           <MDBNavbarItem>
             <MDBNavbarLink href='#skills'>
               &nbsp;&nbsp;Skills&nbsp;&nbsp;
