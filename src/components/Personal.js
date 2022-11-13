@@ -32,8 +32,19 @@ const Personal = () => {
           </p>
           <p className='text-white text-xl sm:col-2 lg:ml-20 lg:mr-40 sm:mx-10'>
             I love building beautifully functional websites and web
-            applications. I enjoy solving the problems that everyone else has a
-            problem with.
+            applications. I enjoy solving the problems that everyone else has
+            issues figuring out. I like making things work, even if they are
+            very complicated.
+          </p>
+          <p className='text-white text-xl sm:col-2 lg:ml-20 lg:mr-40 sm:mx-10'>
+            Creating websites is my passion, but I also love graphic design.
+            I've done a lot of practicing in Adobe's Photoshop and Illustrator.
+          </p>
+          <p className='text-white text-xl sm:col-2 lg:ml-20 lg:mr-40 sm:mx-10'>
+            I've created logos and branding for small businesses, and I've
+            gotten their new brand set up on a beautiful website to show the
+            world and attract more customers. I have taught friends and family
+            how to code and how to make things work in the programming world.
           </p>
         </div>
       </div>
