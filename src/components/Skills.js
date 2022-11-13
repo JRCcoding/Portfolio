@@ -16,17 +16,17 @@ const Skills = () => {
       <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-80'>
         {skills.map((skill) => (
           <div key={skill} className='p-2 sm:w-1/2 w-full'>
-            <div className='rounded flex p-4 items-center border bg-black'>
-              <Bounce left cascade>
+            <Bounce left cascade>
+              <div className='rounded flex p-4 items-center border bg-black'>
                 <Icon
-                  icon='heroicons-outline:badge-check '
+                  icon='akar-icons:circle-check-fill'
                   className='text-white h-5 w-5  md:h-6 flex-shrink-0 mr-4'
                 />
                 <span className='title-font font-medium text-white'>
                   {skill}
                 </span>
-              </Bounce>
-            </div>
+              </div>
+            </Bounce>
           </div>
         ))}
       </div>
