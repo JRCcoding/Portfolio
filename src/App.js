@@ -6,6 +6,7 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import ScrollButton from './components/ScrollButton'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Personal from './components/Personal'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navi />
 
       <About />
+      <Personal />
       <Skills />
       {/* <Work /> */}
       <Contact />

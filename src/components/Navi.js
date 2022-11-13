@@ -92,6 +92,11 @@ export default function App() {
           </a>
 
           <MDBNavbarItem>
+            <MDBNavbarLink href='#personal'>
+              &nbsp;&nbsp;About&nbsp;&nbsp;
+            </MDBNavbarLink>
+          </MDBNavbarItem>
+          <MDBNavbarItem>
             <MDBNavbarLink href='#skills'>
               &nbsp;&nbsp;Skills&nbsp;&nbsp;
             </MDBNavbarLink>

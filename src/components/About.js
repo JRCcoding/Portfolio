@@ -19,7 +19,7 @@ const About = () => {
             className='inline text-white w-20 h-20 mx-0'
           />
           <h1 className='inline ml-10 lg:text-4xl tracking-tight md:tracking-normal'>
-            J. Claxton
+            Web Dev
           </h1>
           <p className='-mt-5 pt-10 text-xl text-left md:text-left mb-80'>
             I love to build beautifully functional websites.
@@ -38,12 +38,6 @@ const About = () => {
         ></img>
       </div>
       {/* <span id='skills'></span> */}
-      <Icon
-        icon='bx:code-alt'
-        className='content-center text-white w-20 h-20 mx-auto mt-80 ml-0'
-        id='skills'
-      />{' '}
-      <h1 className='text-center'>Skills</h1>
     </div>
   )
 }
