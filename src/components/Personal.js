@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from '@iconify/react'
+// import { Icon } from '@iconify/react'
 import face from '../images/face.png'
 import { Container } from 'react-bootstrap'
 import Rotate from 'react-reveal/Rotate'
