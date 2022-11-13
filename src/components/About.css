@@ -1,6 +1,14 @@
 .computer {
-    height: 500px;
-    width: 700px;
+    height: 300px;
+    width: 300px;
+    margin-left: 10%;
+}
+@media only screen and (min-width: 600px) {
+    .computer {
+        height: 400px;
+        width: 600px;
+        margin-left: 0;
+    }
 }
 .animate__animated.animate__fadeIn {
     --animate-duration: 5s;
