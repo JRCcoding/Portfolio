@@ -1,13 +1,15 @@
-import Iframe from 'react-iframe'
+// import Iframe from 'react-iframe'
 import { Icon } from '@iconify/react'
-import { Row, Col, Button } from 'react-bootstrap'
-import { useState } from 'react'
-import { MDBCollapse } from 'mdb-react-ui-kit'
+import { Row, Col, Image } from 'react-bootstrap'
+// import { useState } from 'react'
+// import { MDBCollapse } from 'mdb-react-ui-kit'
+import kk_ss from '../images/kk_ss.png'
+import she_ss from '../images/she_ss.png'
 
 export default function Projects() {
-  const [showShow, setShowShow] = useState(false)
+  // const [showShow, setShowShow] = useState(false)
 
-  const toggleShow = () => setShowShow(!showShow)
+  // const toggleShow = () => setShowShow(!showShow)
   return (
     <section className='mb-80'>
       {/* <div className=' py-10 text-center lg:px-40'>
@@ -70,9 +72,9 @@ export default function Projects() {
             position='relative'
           />
         </Col> */}
-        <Button onClick={toggleShow}>
+        {/* <Button onClick={toggleShow}>
           <h1> Show All </h1>
-        </Button>
+        </Button> */}
         <Col className='mb-10'>
           <h2 className='text-white mt-20 text-center'>
             <a
@@ -84,16 +86,18 @@ export default function Projects() {
               Ecommerce Template
             </a>
           </h2>
-          <MDBCollapse show={showShow}>
-            <Iframe
+          <img src={she_ss} alt='ecommerce' />
+
+          {/* <MDBCollapse show={showShow}> */}
+          {/* <Iframe
               url='https://stonyhill.herokuapp.com/'
               width='600px'
               height='800px'
               className='mx-auto'
               display='block'
               position='relative'
-            />
-          </MDBCollapse>
+            /> */}
+          {/* </MDBCollapse> */}
         </Col>
         <Col>
           <h2 className='text-white mt-20 text-center'>
@@ -106,16 +110,17 @@ export default function Projects() {
               Kaitlyn King
             </a>
           </h2>
-          <MDBCollapse show={showShow}>
-            <Iframe
+          <img src={kk_ss} alt='kaitlyn king' />
+          {/* <MDBCollapse show={showShow}> */}
+          {/* <Iframe
               url='https://jrccoding.github.io/KaitlynKing1.0/'
               width='600px'
               height='800px'
               className='mx-auto'
               display='block'
               position='relative'
-            />
-          </MDBCollapse>
+            /> */}
+          {/* </MDBCollapse> */}
         </Col>
       </Row>
       {/* <Row>
