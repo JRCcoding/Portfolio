@@ -2,7 +2,7 @@ import Iframe from 'react-iframe'
 import { Icon } from '@iconify/react'
 import { Row, Col, Button } from 'react-bootstrap'
 import { useState } from 'react'
-import { MDBCollapse, MDBBtn } from 'mdb-react-ui-kit'
+import { MDBCollapse } from 'mdb-react-ui-kit'
 
 export default function Projects() {
   const [showShow, setShowShow] = useState(false)
