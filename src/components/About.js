@@ -7,7 +7,7 @@ import Welcome from '../images/welcome.png'
 
 const About = () => {
   return (
-    <div className='text-white mt-20 lg:mt-60 animate__animated animate__flash'>
+    <div className='text-white mt-20 lg:mt-60 animate__animated animate__flash animate__repeat-2'>
       <div className='flex sm:flex-col-reverse lg:flex-row md:ml-60 lg:ml-0'>
         <div>
           {/* <Icon
