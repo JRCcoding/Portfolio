@@ -83,7 +83,7 @@ export default function Projects() {
               target='_blank'
               rel='noreferrer'
             >
-              Ecommerce Template
+              Ecommerce
             </a>
           </h2>
           <img src={she_ss} alt='ecommerce' />
