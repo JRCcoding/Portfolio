@@ -7,6 +7,7 @@ import Contact from './components/Contact'
 import ScrollButton from './components/ScrollButton'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Personal from './components/Personal'
+import Work from './components/Work'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <About />
       <Personal />
       <Skills />
-      {/* <Work /> */}
+      <Work />
+      {/* <Hub /> */}
       <Contact />
       <ScrollButton />
     </div>

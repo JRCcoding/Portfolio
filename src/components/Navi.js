@@ -100,11 +100,12 @@ export default function App() {
               &nbsp;&nbsp;Skills&nbsp;&nbsp;
             </MDBNavbarLink>
           </MDBNavbarItem>
-          {/* <MDBNavbarItem>
+          <MDBNavbarItem>
             <MDBNavbarLink href='#work'>
               &nbsp;&nbsp;Work&nbsp;&nbsp;
             </MDBNavbarLink>
-          </MDBNavbarItem> */}
+          </MDBNavbarItem>
+
           <MDBNavbarItem>
             <MDBNavbarLink href='#contact'>
               &nbsp;&nbsp;Contact&nbsp;&nbsp;

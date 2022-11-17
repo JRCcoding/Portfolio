@@ -1,10 +1,16 @@
+import Iframe from 'react-iframe'
 import { Icon } from '@iconify/react'
-import { projects } from '../data'
+import { Row, Col, Button } from 'react-bootstrap'
+import { useState } from 'react'
+import { MDBCollapse, MDBBtn } from 'mdb-react-ui-kit'
 
 export default function Projects() {
+  const [showShow, setShowShow] = useState(false)
+
+  const toggleShow = () => setShowShow(!showShow)
   return (
-    <section className='text-gray-400 bg-gray-900 body-font my-60'>
-      <div className=' py-10 text-center lg:px-40'>
+    <section className='mb-80'>
+      {/* <div className=' py-10 text-center lg:px-40'>
         <div className='flex flex-col w-full mb-20 mx-auto'>
           <div className='text-white'>
             <div className='title' id='work'>
@@ -46,7 +52,94 @@ export default function Projects() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
+      <Icon
+        icon='bx:code-alt'
+        className='content-center text-white w-20 h-20 mx-auto mt-80 ml-0'
+        id='work'
+      />{' '}
+      <h1 className='text-center text-white'>Work</h1>
+      <Row>
+        {/* <Col className='mb-10'>
+          <Iframe
+            url='https://jrchub.herokuapp.com'
+            width='600px'
+            height='400px'
+            className='mx-auto'
+            display='block'
+            position='relative'
+          />
+        </Col> */}
+        <Button onClick={toggleShow}>
+          <h1> Show All </h1>
+        </Button>
+        <Col className='mb-10'>
+          <h2 className='text-white mt-20 text-center'>
+            <a
+              href='https://stonyhill.herokuapp.com/'
+              className='text-2xl no-underline text-white visited:text-white hover:text-green'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Ecommerce Template
+            </a>
+          </h2>
+          <MDBCollapse show={showShow}>
+            <Iframe
+              url='https://stonyhill.herokuapp.com/'
+              width='600px'
+              height='800px'
+              className='mx-auto'
+              display='block'
+              position='relative'
+            />
+          </MDBCollapse>
+        </Col>
+        <Col>
+          <h2 className='text-white mt-20 text-center'>
+            <a
+              href='https://jrccoding.github.io/KaitlynKing1.0/'
+              className='text-2xl no-underline text-white visited:text-white hover:text-green'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Kaitlyn King
+            </a>
+          </h2>
+          <MDBCollapse show={showShow}>
+            <Iframe
+              url='https://jrccoding.github.io/KaitlynKing1.0/'
+              width='600px'
+              height='800px'
+              className='mx-auto'
+              display='block'
+              position='relative'
+            />
+          </MDBCollapse>
+        </Col>
+      </Row>
+      {/* <Row>
+        <Col className='mb-10'>
+          <Iframe
+            url='https://jrccoding.github.io/KaitlynKing1.0/'
+            width='600px'
+            height='400px'
+            className='mx-auto'
+            display='block'
+            position='relative'
+          />
+        </Col> */}
+      {/* <Col className='mb-10'>
+          <Iframe
+            url='https://lnctreats.com'
+            width='900px'
+            height='600px'
+            className='mx-auto'
+            display='block'
+            position='relative'
+          />
+        </Col> */}
+      {/* </Row> */}
     </section>
   )
 }
