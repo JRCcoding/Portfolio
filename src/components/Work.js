@@ -76,17 +76,15 @@ export default function Projects() {
           <h1> Show All </h1>
         </Button> */}
         <Col className='mb-10'>
-          <h2 className='text-white mt-20 text-center'>
-            <a
-              href='https://stonyhill.herokuapp.com/'
-              className='text-2xl no-underline text-white visited:text-white hover:text-green'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Ecommerce
-            </a>
-          </h2>
-          <img src={she_ss} alt='ecommerce' />
+          <a
+            href='https://stonyhill.herokuapp.com/'
+            className='text-2xl no-underline text-white visited:text-white hover:text-green'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <h2 className='text-white mt-20 text-center'>Ecommerce</h2>
+            <img src={she_ss} alt='ecommerce' />{' '}
+          </a>
 
           {/* <MDBCollapse show={showShow}> */}
           {/* <Iframe
@@ -100,17 +98,16 @@ export default function Projects() {
           {/* </MDBCollapse> */}
         </Col>
         <Col>
-          <h2 className='text-white mt-20 text-center'>
-            <a
-              href='https://jrccoding.github.io/KaitlynKing1.0/'
-              className='text-2xl no-underline text-white visited:text-white hover:text-green'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Kaitlyn King
-            </a>
-          </h2>
-          <img src={kk_ss} alt='kaitlyn king' />
+          <a
+            href='https://jrccoding.github.io/KaitlynKing1.0/'
+            className='text-2xl no-underline text-white visited:text-white hover:text-green'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <h2 className='text-white mt-20 text-center'>Personal</h2>
+            <img src={kk_ss} alt='kaitlyn king' />
+          </a>
+
           {/* <MDBCollapse show={showShow}> */}
           {/* <Iframe
               url='https://jrccoding.github.io/KaitlynKing1.0/'
