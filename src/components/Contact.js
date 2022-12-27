@@ -8,7 +8,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm('mlevgnlj')
   if (state.succeeded) {
     return (
-      <div>
+      <div className='thanks_message'>
         Thank you so much for your interest! I will get back to you within as
         soon as possible!
       </div>
