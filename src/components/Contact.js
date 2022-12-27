@@ -26,10 +26,6 @@ const Contact = () => {
       </h1>
 
       <MDBCard className='contact_MDBCard'>
-        <MDBCardTitle className='contact_title mb-5 mt-2'>
-          <h1 className='text-[rgb(0,175,145)]'>Quick Form:</h1>
-        </MDBCardTitle>
-
         <MDBCardBody className='contact_form text-[rgb(0,175,145)]'>
           <form onSubmit={handleSubmit}>
             <label className='form-label' htmlFor='name'>
