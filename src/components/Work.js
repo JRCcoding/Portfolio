@@ -13,7 +13,7 @@ export default function Projects() {
         id='work'
       />{' '}
       <h1 className='text-center text-white'>Work</h1>
-      <Row lg={1}>
+      <Row xs={1} sm={1} md={1} lg={1}>
         <Col className='mb-10'>
           <a
             href='https://lnctreats.com/'
