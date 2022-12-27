@@ -74,13 +74,15 @@ const Contact = () => {
               name='message'
               required
             ></input>
-            <button
-              type='submit'
-              className='contact_submit'
-              disabled={state.submitting}
-            >
-              Send to Josh!
-            </button>
+            <div className='submit_container'>
+              <button
+                type='submit'
+                className='contact_submit'
+                disabled={state.submitting}
+              >
+                Send to Josh!
+              </button>
+            </div>
           </form>
         </MDBCardBody>
       </MDBCard>
