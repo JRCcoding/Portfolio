@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap'
 import kk_ss from '../images/kk_ss.png'
 import she_ss from '../images/she_ss.png'
 import lnc_ss from '../images/lnc_ss.png'
+import './Work.css'
 
 export default function Projects() {
   return (

@@ -1,0 +1,33 @@
+.contact_MDBCard {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact_title {
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact_submit {
+    color: rgb(0,175,145);
+}
+.contact_submit {
+    background-color: rgb(0,175,145);
+    color: white;
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-left: auto;
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    box-shadow: 3px 3px 5px 3px rgb(0,0,0,0.5);
+}
+.contact_submit:hover {
+    background-color: rgb(0,155,125);
+}
+@media only screen and (max-width: 600px) {
+    .work_img {
+        width: 100%;
+    }
+    .contact_MDBCard {
+        width: 95%;
+    }
+}
