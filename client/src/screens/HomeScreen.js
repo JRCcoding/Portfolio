@@ -8,10 +8,10 @@ const HomeScreen = () => {
     <div>
       <Icon
         icon='bx:code-alt'
-        className='content-center  text-white w-20 h-20 mx-auto mt-40 ml-0'
+        className='content-centet text-white w-20 h-20 mx-auto mt-40 ml-0'
         id='home'
       />{' '}
-      <h1 className='text-center text-3xl  text-white mb-40'>Josh Claxton</h1>
+      <h1 className='text-center text-7xl  text-white mb-40'>Josh Claxton</h1>
       <Personal />
       <Contact />
       <ScrollButton />
