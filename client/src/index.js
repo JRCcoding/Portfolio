@@ -11,10 +11,10 @@ root.render(
     clientId='N5jCTC0DofYRPTr6PKJUmGWSI9llXEmh'
     authorizationParams={{
       //  Redirect for production
-      // redirect_uri: 'https://blog-gpj8.onrender.com',
+      redirect_uri: 'https://josh-claxton.com/admin/new',
 
       //  Redirect for development
-      redirect_uri: 'http://localhost:3000/admin/new',
+      // redirect_uri: 'http://localhost:3000/admin/new',
 
       //  This line forces login each time, otherwise auto login after first.
       // prompt: 'login',
