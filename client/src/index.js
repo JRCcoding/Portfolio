@@ -8,13 +8,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <Auth0Provider
     domain='dev-dstps3q4l34f7d23.us.auth0.com'
-    clientId='2SGCWz2U2Cs96woMjSWXI488KYHSlbx1'
+    clientId='N5jCTC0DofYRPTr6PKJUmGWSI9llXEmh'
     authorizationParams={{
       //  Redirect for production
       // redirect_uri: 'https://blog-gpj8.onrender.com',
 
       //  Redirect for development
-      redirect_uri: 'http://localhost:3000',
+      redirect_uri: 'http://localhost:3000/admin/new',
 
       //  This line forces login each time, otherwise auto login after first.
       // prompt: 'login',

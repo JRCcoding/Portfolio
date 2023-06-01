@@ -90,9 +90,20 @@ const NewBlogpostScreen = ({ history }) => {
     'link',
     'video',
   ]
+
+  const authLogin = () => {
+    loginWithRedirect()
+  }
+
+  const authLogout = () => {
+    logout()
+  }
+
   return isAuthenticated ? (
     <div className='mt-20 min-h-screen'>
-      <button onClick={logout()}>LOGOUT</button>
+      <button onClick={authLogout} className='loginout'>
+        LOGOUT
+      </button>
       <Form
         onSubmit={submitHandler}
         style={{
@@ -154,7 +165,9 @@ const NewBlogpostScreen = ({ history }) => {
     </div>
   ) : (
     <div className='min-h-screen'>
-      <button onClick={loginWithRedirect()}>LOGIN</button>
+      <button onClick={authLogin} className='loginout'>
+        LOGIN
+      </button>
     </div>
   )
 }
