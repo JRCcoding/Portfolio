@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Josh Claxton",
   "main": "index.js",
+  "homepage": "https://josh-claxton.onrender.com/",
   "scripts": {
     "start": "node server/server",
     "server": "nodemon server/server",
@@ -20,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/JRCcoding/portfolio/issues"
   },
-  "homepage": "https://github.com/JRCcoding/portfolio#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "concurrently": "^8.0.1",
