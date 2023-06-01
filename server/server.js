@@ -4,8 +4,9 @@ import dotenv from 'dotenv'
 import express from 'express'
 import fs from 'fs'
 import multer from 'multer'
-import blogRoutes from './Routes/blogRoutes.js'
+import path from 'path'
 import DB from './db.js'
+import blogRoutes from './Routes/blogRoutes.js'
 
 dotenv.config()
 
