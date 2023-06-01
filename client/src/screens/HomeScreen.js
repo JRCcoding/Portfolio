@@ -5,7 +5,7 @@ import Personal from '../components/Personal'
 import ScrollButton from '../components/ScrollButton'
 const HomeScreen = () => {
   return (
-    <div>
+    <div className='min-h-screen'>
       <Icon
         icon='bx:code-alt'
         className='content-centet text-white w-20 h-20 mx-auto mt-40 ml-0'
