@@ -1,7 +1,7 @@
 import axios from 'axios'
 import parse from 'html-react-parser'
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const BlogpostScreen = () => {
   const [blogpost, setBlogpost] = useState()
@@ -9,7 +9,20 @@ const BlogpostScreen = () => {
   const navigate = useNavigate()
   useEffect(() => {
     const fetchBlogpost = async () => {
-      const { data } = await axios.get(`/api/blogposts/${id}`)
+      const { data } = await axios
+        .get(`/api/blogposts/${id}`)
+        .catch(function (error) {
+          if (error.response) {
+            console.log(error.response.data)
+            console.log(error.response.status)
+            console.log(error.response.headers)
+          } else if (error.request) {
+            console.log(error.request)
+          } else {
+            console.log(`Error ${error.message}`)
+          }
+          console.log(error.config)
+        })
       setBlogpost(data)
     }
     fetchBlogpost()
@@ -56,20 +69,16 @@ const BlogpostScreen = () => {
             {blogpost.date}
           </strong>
           <br />
-          <Link
-            to={`/profile/${blogpost.submitId}`}
-            style={{ textDecoration: 'none', color: 'black' }}
-          >
-            <sub>
-              &nbsp;&nbsp; - by {blogpost.submitUser}
-              {/* <img
+
+          <sub>
+            &nbsp;&nbsp; - by Josh Claxton
+            {/* <img
                 src={blogpost.submitUserImage}
                 alt={blogpost.submitUser}
                 style={{ height: '40px', borderRadius: '50%' }}
               /> */}
-            </sub>
-            <br />
-          </Link>
+          </sub>
+          <br />
           <br />
           <div style={{ textIndent: '15px', wordWrap: 'break-word' }}>
             {blogpost?.upload && (
