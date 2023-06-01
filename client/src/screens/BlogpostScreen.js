@@ -86,7 +86,7 @@ const BlogpostScreen = () => {
                 {blogpost.upload.description !== '' && (
                   <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <img
-                      src={`/images/${blogpost.upload?.imageName}`}
+                      src={`../images/${blogpost.upload?.imageName}`}
                       alt={blogpost.upload?.imageName}
                       style={{
                         width: '460px',
