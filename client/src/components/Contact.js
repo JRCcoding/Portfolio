@@ -1,7 +1,8 @@
-import React from 'react'
-import { Icon } from '@iconify/react'
 import { useForm } from '@formspree/react'
-import { MDBCardBody, MDBCardTitle, MDBCard } from 'mdb-react-ui-kit'
+import { Icon } from '@iconify/react'
+import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit'
+import React from 'react'
+import { FloatingLabel, Form } from 'react-bootstrap'
 import './Contact.css'
 
 const Contact = () => {
@@ -21,55 +22,57 @@ const Contact = () => {
         className='content-center text-white w-20 h-20 mx-auto'
         id='skills'
       />
-      <h1 className='text-center text-white' id='contact'>
+      <h1 className='text-center text-3xl text-white' id='contact'>
         Contact
       </h1>
 
       <MDBCard className='contact_MDBCard'>
         <MDBCardBody className='contact_form text-[rgb(0,175,145)]'>
-          <form onSubmit={handleSubmit}>
-            <label className='form-label' htmlFor='name'>
-              Name:
-            </label>
-            <input
-              className='form-control mb-3'
-              id='name'
-              type='text'
-              name='name'
-              required
-            />
-            <label className='form-label' htmlFor='number'>
-              Number:
-            </label>
-            <input
-              className='form-control mb-3'
-              id='number'
-              type='text'
-              name='number'
-              required
-            />
+          <Form onSubmit={handleSubmit}>
+            <FloatingLabel label='Name:'>
+              <input
+                className='form-control mb-3'
+                id='name'
+                type='text'
+                name='name'
+                required
+                placeholder='Name:'
+              />
+            </FloatingLabel>
 
-            <label className='form-label' htmlFor='email'>
-              Email:
-            </label>
-            <input
-              className='form-control mb-3'
-              id='email'
-              type='email'
-              name='email'
-              required
-            />
+            <FloatingLabel label='Number:'>
+              <input
+                className='form-control mb-3'
+                id='number'
+                type='text'
+                name='number'
+                required
+                placeholder='Number:'
+              />
+            </FloatingLabel>
 
-            <label className='form-label' htmlFor='message'>
-              Message:
-            </label>
-            <input
-              className='form-control '
-              id='message'
-              type='text'
-              name='message'
-              required
-            ></input>
+            <FloatingLabel label='Email:'>
+              <input
+                className='form-control mb-3'
+                id='email'
+                type='email'
+                name='email'
+                required
+                placeholder='Email:'
+              />
+            </FloatingLabel>
+
+            <FloatingLabel label='Message:'>
+              <input
+                className='form-control '
+                id='message'
+                type='text'
+                name='message'
+                required
+                placeholder='Message:'
+              ></input>
+            </FloatingLabel>
+
             <div className='submit_container'>
               <button
                 type='submit'
@@ -79,7 +82,7 @@ const Contact = () => {
                 Send to Josh!
               </button>
             </div>
-          </form>
+          </Form>
         </MDBCardBody>
       </MDBCard>
       {/* <p className='text-center'>
