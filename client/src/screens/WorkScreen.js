@@ -1,19 +1,19 @@
 import { Icon } from '@iconify/react'
-import { Row, Col } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import kk_ss from '../images/kk_ss.png'
-import she_ss from '../images/she_ss.png'
 import lnc_ss from '../images/lnc_ss.png'
-import './Work.css'
+import she_ss from '../images/she_ss.png'
+import '../styles/Work.css'
 
 export default function Projects() {
   return (
     <section className='mb-80'>
       <Icon
         icon='bx:code-alt'
-        className='content-center text-white w-20 h-20 mx-auto mt-80 ml-0'
+        className='content-center text-white w-20 h-20 mx-auto mt-40 ml-0'
         id='work'
       />{' '}
-      <h1 className='text-center text-white'>Work</h1>
+      <h1 className='text-center text-3xl text-white'>Work</h1>
       <Row xs={1} sm={1} md={1} lg={1}>
         <Col className='mb-10'>
           <a

@@ -1,65 +1,37 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://JRCcoding.github.io/",
-  "dependencies": {
-    "@formspree/react": "^2.4.1",
-    "@fortawesome/fontawesome-svg-core": "^6.2.0",
-    "@fortawesome/free-regular-svg-icons": "^6.2.0",
-    "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@material-tailwind/react": "^1.2.4",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/react-transition-group": "^4.4.5",
-    "animate.css": "^4.1.1",
-    "aphrodite": "^2.4.0",
-    "bootstrap": "^5.2.2",
-    "fontawesome": "^5.6.3",
-    "mdb-react-ui-kit": "^4.2.0",
-    "react": "^18.2.0",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-animations": "^1.0.0",
-    "react-bootstrap": "^2.5.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0",
-    "react-iframe": "^1.8.5",
-    "react-reveal": "^1.2.2",
-    "react-router-dom": "^6.4.2",
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
-  },
+  "type": "module",
+  "description": "Josh Claxton",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build && cd build && echo www.josh-claxton.com > CNAME",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node server/server",
+    "server": "nodemon server/server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRCcoding/portfolio.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRCcoding/portfolio/issues"
   },
-  "devDependencies": {
-    "@iconify/react": "^4.0.0",
-    "gh-pages": "^4.0.0",
-    "tailwindcss": "^3.2.1"
+  "homepage": "https://github.com/JRCcoding/portfolio#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-oauth2-jwt-bearer": "^1.5.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^7.2.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.22"
   }
 }
