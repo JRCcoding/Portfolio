@@ -6,8 +6,8 @@ import fs from 'fs'
 import multer from 'multer'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import DB from './db.js'
 import blogRoutes from './Routes/blogRoutes.js'
+import DB from './db.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -41,7 +41,7 @@ const fileType = (str) => {
 // })
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'client/public/images')
+    cb(null, 'client/build/images')
   },
   filename: function (req, file, cb) {
     cb(null, `${submitDate}.jpg`)
