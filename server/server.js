@@ -4,9 +4,13 @@ import dotenv from 'dotenv'
 import express from 'express'
 import fs from 'fs'
 import multer from 'multer'
-import path from 'path'
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
 import DB from './db.js'
 import blogRoutes from './Routes/blogRoutes.js'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 dotenv.config()
 
