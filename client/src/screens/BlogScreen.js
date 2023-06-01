@@ -32,36 +32,39 @@ const Blog = () => {
           Recent Blogs
         </h2> */}
         {blogposts &&
-          blogposts.reverse().map((blogpost) => (
-            <a
-              href={`/blogposts/${blogpost._id}`}
-              className='nav-link'
-              key={blogpost.title}
-            >
-              <div>
-                <h5>{blogpost.date}</h5>
-                <h4 style={{ display: 'inline' }}>{blogpost.title}</h4>
-                <div
-                  style={{
-                    display: 'inline',
-                    // position: 'absolute',
-                    // right: '7%',
-                    float: 'right',
-                  }}
-                >
-                  {/* <img
+          blogposts
+            .slice(0)
+            .reverse()
+            .map((blogpost) => (
+              <a
+                href={`/blogposts/${blogpost._id}`}
+                className='nav-link'
+                key={blogpost.title}
+              >
+                <div>
+                  <h5>{blogpost.date}</h5>
+                  <h4 style={{ display: 'inline' }}>{blogpost.title}</h4>
+                  <div
+                    style={{
+                      display: 'inline',
+                      // position: 'absolute',
+                      // right: '7%',
+                      float: 'right',
+                    }}
+                  >
+                    {/* <img
               src={blogpost.submitUserImage}
               alt={blogpost.submitUser}
               style={{ height: '60px', borderRadius: '50%' }}
             /> */}
-                  <strong>- {blogpost.submitUser}</strong>
-                </div>
+                    <strong>- {blogpost.submitUser}</strong>
+                  </div>
 
-                <h6>{parse(blogpost.body.substring(0, 100))}...</h6>
-                <hr />
-              </div>
-            </a>
-          ))}
+                  <h6>{parse(blogpost.body.substring(0, 100))}...</h6>
+                  <hr />
+                </div>
+              </a>
+            ))}
       </div>
     </div>
   )

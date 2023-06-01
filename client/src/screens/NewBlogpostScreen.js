@@ -1,18 +1,16 @@
-import { useAuth0 } from '@auth0/auth0-react'
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Form } from 'react-bootstrap'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { useNavigate } from 'react-router-dom'
+import profimage from '../images/face.png'
 
 const NewBlogpostScreen = ({ history }) => {
-  const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0()
-  const [submitId, setSubmitId] = useState(isAuthenticated && user.sub)
-  const [submitUser, setSubmitUser] = useState(isAuthenticated && user.name)
-  const [submitUserImage, setSubmitUserImage] = useState(
-    isAuthenticated ? user.picture : ''
-  )
+  // const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0()
+  const [submitId, setSubmitId] = useState('jrccode')
+  const [submitUser, setSubmitUser] = useState('Josh Claxton')
+  const submitUserImage = profimage
   const [title, setTitle] = useState('')
   const today = new Date()
   const splitToday = JSON.stringify(today).split('-')
@@ -50,7 +48,7 @@ const NewBlogpostScreen = ({ history }) => {
       body,
       upload: result.data,
     }
-    await axios.post(`/api/blogposts`, blogEntry).then(navigate('/'))
+    await axios.post(`/api/blogposts`, blogEntry).then(navigate('/blogs'))
   }
   const EditorModules = {
     toolbar: [
@@ -91,19 +89,19 @@ const NewBlogpostScreen = ({ history }) => {
     'video',
   ]
 
-  const authLogin = () => {
-    loginWithRedirect()
-  }
+  // const authLogin = () => {
+  //   loginWithRedirect()
+  // }
 
-  const authLogout = () => {
-    logout()
-  }
+  // const authLogout = () => {
+  //   logout()
+  // }
 
-  return isAuthenticated ? (
+  return (
     <div className='mt-20 min-h-screen'>
-      <button onClick={authLogout} className='loginout'>
+      {/* <button onClick={authLogout} className='loginout'>
         LOGOUT
-      </button>
+      </button> */}
       <Form
         onSubmit={submitHandler}
         style={{
@@ -154,20 +152,17 @@ const NewBlogpostScreen = ({ history }) => {
           onChange={(e) => setFile(e.target.files[0])}
           type='file'
           accept='png jpg jpeg'
+          style={{ color: 'white' }}
         ></input>
         <input
           onChange={(e) => setDescription(e.target.value)}
           type='text'
           required={file && true}
         ></input>
-        <button type='submit'>Submit</button>
+        <button type='submit' style={{ color: 'white' }}>
+          Submit
+        </button>
       </Form>
-    </div>
-  ) : (
-    <div className='min-h-screen'>
-      <button onClick={authLogin} className='loginout'>
-        LOGIN
-      </button>
     </div>
   )
 }
