@@ -4,6 +4,7 @@ import { Form } from 'react-bootstrap'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { useNavigate } from 'react-router-dom'
+import ImageUpload from '../components/ImageUpload'
 import profimage from '../images/face.png'
 
 const NewBlogpostScreen = ({ history }) => {
@@ -135,7 +136,7 @@ const NewBlogpostScreen = ({ history }) => {
             style={{ color: 'white' }}
           />
         </div>
-        <input
+        {/* <input
           filename={file}
           onChange={(e) => setFile(e.target.files[0])}
           type='file'
@@ -146,8 +147,8 @@ const NewBlogpostScreen = ({ history }) => {
           onChange={(e) => setDescription(e.target.value)}
           type='text'
           required={file && true}
-        ></input>
-        {/* <ImageUpload /> */}
+        ></input> */}
+        <ImageUpload />
         <button onClick={submitHandler} style={{ color: 'white' }}>
           Submit
         </button>
