@@ -1,7 +1,5 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-const clientId =
-  '198879685170-2s6as07mbs4fnh6qqd5gfik4d6hibsf7.apps.googleusercontent.com'
 const ImageUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null)
   const [accessToken, setAccessToken] = useState(null)
@@ -11,8 +9,11 @@ const ImageUpload = () => {
   }
 
   const handleLogin = () => {
+    const clientId =
+      '198879685170-2s6as07mbs4fnh6qqd5gfik4d6hibsf7.apps.googleusercontent.com'
+
     // Redirect the user to the Google authorization URL
-    window.location.href = `https://accounts.google.com/o/oauth2/auth?client_id=${clientId}&redirect_uri=http://localhost:300/admin/new&response_type=code&scope=https://www.googleapis.com/auth/photoslibrary`
+    window.location.href = `https://accounts.google.com/o/oauth2/auth?client_id=${clientId}&redirect_uri=http://localhost:3000/admin/new&response_type=code&scope=https://www.googleapis.com/auth/photoslibrary`
   }
 
   const exchangeCodeForToken = async (code) => {
@@ -20,14 +21,10 @@ const ImageUpload = () => {
       const response = await axios.post(
         'https://www.googleapis.com/oauth2/v4/token',
         {
-          code,
-          client_id: clientId,
+          client_id:
+            '198879685170-2s6as07mbs4fnh6qqd5gfik4d6hibsf7.apps.googleusercontent.com',
           client_secret: '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',
-          redirect_uri: 'http://localhost:300/admin/new',
-          grant_type: 'authorization_code',
-          headers: {
-            'Content-Type': 'application/octet-stream',
-          },
+          redirect_uri: 'http://localhost:3000/admin/new',
         }
       )
 
