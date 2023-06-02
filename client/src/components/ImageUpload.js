@@ -1,6 +1,7 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 
-const ImageUpload = () => {
+const ImageUpload = ({ onImageUpload }) => {
   const [selectedImage, setSelectedImage] = useState(null)
   const [imageUrl, setImageUrl] = useState('')
 
@@ -9,19 +10,23 @@ const ImageUpload = () => {
     setSelectedImage(file)
   }
 
-  const handleUpload = () => {
+  const handleUpload = (event) => {
+    event.preventDefault()
+
     if (selectedImage) {
       const formData = new FormData()
       formData.append('file', selectedImage)
 
-      fetch('/upload', {
-        method: 'POST',
-        body: formData,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          setImageUrl(data.imageUrl)
-          setSelectedImage(null)
+      axios
+        .post('/upload', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+        })
+        .then((response) => {
+          console.log(response.data)
+          setImageUrl(response.data.imageUrl)
+          onImageUpload(response.data.imageUrl) // Pass imageUrl to the parent component
         })
         .catch((error) => {
           console.error('Error uploading image:', error)
@@ -30,11 +35,16 @@ const ImageUpload = () => {
   }
 
   return (
-    <div>
+    <form style={{ color: 'white' }}>
       <input type='file' onChange={handleImageChange} />
-      <button onClick={handleUpload}>Upload Image</button>
-      {imageUrl && <img src={imageUrl} alt='Uploaded' />}
-    </div>
+      <button onClick={(event) => handleUpload(event)}>Upload Image</button>
+      {imageUrl && imageUrl && (
+        <div>
+          <p>Image uploaded:</p>
+          <img src={imageUrl} alt='Uploaded' />
+        </div>
+      )}
+    </form>
   )
 }
 

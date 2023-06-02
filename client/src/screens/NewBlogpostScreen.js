@@ -20,25 +20,17 @@ const NewBlogpostScreen = ({ history }) => {
   const submitDate = month + '-' + day + '-' + year.substring(1, 5)
   const [date, setDate] = useState(submitDate)
   const [body, setBody] = useState('')
-  const [file, setFile] = useState()
   const [description, setDescription] = useState('')
+  const [uploadedImageUrl, setUploadedImageUrl] = useState('')
+
+  const handleImageUpload = (imageUrl) => {
+    setUploadedImageUrl(imageUrl)
+  }
 
   const navigate = useNavigate()
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    const formData = new FormData()
-    formData.append('image', file)
-    formData.append('description', description)
-
-    const result = await axios.post(
-      '/api/images',
-      formData
-      // , {
-      //   headers: { 'Content-Type': 'multipart/form-data' },
-      // }
-    )
-    console.log(result.data)
     const blogEntry = {
       submitUser,
       submitUserImage,
@@ -46,7 +38,7 @@ const NewBlogpostScreen = ({ history }) => {
       title,
       date,
       body,
-      upload: result.data,
+      uploadedImageUrl,
     }
     await axios.post(`/api/blogposts`, blogEntry).then(navigate('/blogs'))
   }
@@ -136,19 +128,9 @@ const NewBlogpostScreen = ({ history }) => {
             style={{ color: 'white' }}
           />
         </div>
-        {/* <input
-          filename={file}
-          onChange={(e) => setFile(e.target.files[0])}
-          type='file'
-          accept='png jpg jpeg'
-          style={{ color: 'white' }}
-        ></input>
-        <input
-          onChange={(e) => setDescription(e.target.value)}
-          type='text'
-          required={file && true}
-        ></input> */}
-        <ImageUpload />
+        <ImageUpload onImageUpload={handleImageUpload} />
+        <h4 style={{ color: 'white' }}>{uploadedImageUrl}</h4>
+
         <button onClick={submitHandler} style={{ color: 'white' }}>
           Submit
         </button>

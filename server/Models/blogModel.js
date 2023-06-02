@@ -26,8 +26,8 @@ const blogSchema = mongoose.Schema(
       type: String,
       required: false,
     },
-    upload: {
-      type: Object,
+    uploadedImageUrl: {
+      type: String,
       required: false,
     },
   },

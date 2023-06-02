@@ -81,31 +81,29 @@ const BlogpostScreen = () => {
           <br />
           <br />
           <div style={{ textIndent: '15px', wordWrap: 'break-word' }}>
-            {blogpost?.upload && (
+            {blogpost && (
               <>
-                {blogpost.upload.description !== '' && (
-                  <div style={{ display: 'flex', flexDirection: 'column' }}>
-                    <img
-                      src={`../images/${blogpost.upload?.imageName}`}
-                      alt={blogpost.upload?.imageName}
-                      style={{
-                        width: '460px',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                      }}
-                    />
-                    <strong
-                      style={{
-                        width: '95%',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                        textAlign: 'center',
-                      }}
-                    >
-                      <i>{blogpost.upload.description}</i>
-                    </strong>
-                  </div>
-                )}
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <img
+                    src={blogpost.uploadedImageUrl}
+                    alt={blogpost.uploadedImageUrl}
+                    style={{
+                      width: '460px',
+                      marginLeft: 'auto',
+                      marginRight: 'auto',
+                    }}
+                  />
+                  {/* <strong
+                    style={{
+                      width: '95%',
+                      marginLeft: 'auto',
+                      marginRight: 'auto',
+                      textAlign: 'center',
+                    }}
+                  >
+                    <i>{blogpost.upload.description}</i>
+                  </strong> */}
+                </div>
               </>
             )}
             {parse(blogpost.body)}

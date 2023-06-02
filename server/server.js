@@ -1,44 +1,16 @@
 import bodyParser from 'body-parser'
+import cloudinary from 'cloudinary'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
-// import fs from 'fs'
-// import multer from 'multer'
-import cloudinary from 'cloudinary'
+import fs from 'fs'
+import multer from 'multer'
+import { CloudinaryStorage } from 'multer-storage-cloudinary'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import DB from './db.js'
 import blogRoutes from './Routes/blogRoutes.js'
-cloudinary.config({
-  cloud_name: 'dkarlgvva',
-  api_key: '996256143699211',
-  api_secret: '-00AoMnJ4tGQl1z9xi6ytMaS2lg',
-})
-// Upload
+import DB from './db.js'
 
-const res = cloudinary.uploader.upload(
-  'https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg',
-  { public_id: 'olympic_flag' }
-)
-
-res
-  .then((data) => {
-    console.log(data)
-    console.log(data.secure_url)
-  })
-  .catch((err) => {
-    console.log(err)
-  })
-
-// Generate
-const url = cloudinary.url('olympic_flag', {
-  width: 100,
-  height: 150,
-  Crop: 'fill',
-})
-
-// The output url
-console.log(url)
 // https://res.cloudinary.com/<cloud_name>/image/upload/h_150,w_100/olympic_flag
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -52,6 +24,7 @@ app.use(bodyParser.json())
 DB()
 app.use(cors())
 app.use('/api/blogposts', blogRoutes)
+// app.use('/upload')
 
 const PORT = process.env.PORT || 5000
 
@@ -61,55 +34,46 @@ const year = splitToday[0]
 const month = splitToday[1]
 const day = splitToday[2].substring(0, 2)
 const submitDate = month + '-' + day + '-' + year.substring(1, 5)
-//    ALL FOR MULTER
-// const fileType = (str) => {
-//   str.slice(str.lastIndexOf('.'))
-// }
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, 'client/public/images')
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, `${submitDate}.jpg`)
-//   },
-// })
-// const upload = multer({ storage: storage })
-// app.use('/api/images', express.static('images'))
-// app.get('/images', (req, res) => {
-// do a bunch of if statements to make sure the user is
-// authorized to view this image, then
-//   const imageName = `${submitDate}.jpg`
-//   const readStream = fs.createReadStream(`images/${imageName}`)
-//   readStream.pipe(res)
-// })
-// app.post('/api/images', upload.single('image'), (req, res) => {
-//   const imageName = `${submitDate}.jpg`
-//   const description = req.body.description
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: 'dkarlgvva',
+  api_key: '996256143699211',
+  api_secret: '-00AoMnJ4tGQl1z9xi6ytMaS2lg',
+})
+// Set up multer storage using Cloudinary
+const storage = new CloudinaryStorage({
+  cloudinary,
+  folder: 'uploads',
+  allowedFormats: ['jpg', 'png', 'jpeg'],
+  transformation: [{ width: 500, height: 500, crop: 'limit' }],
+})
 
-//   // Save this data to a database probably
+// Set up multer middleware with the configured storage
+const upload = multer({ dest: 'uploads/' })
 
-//   console.log(description, imageName)
-//   res.send({ description, imageName })
-// })
+app.post('/upload', upload.single('file'), async (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ message: 'No file uploaded' })
+  }
 
-// app.delete('/api/images/delete', (req, res) => {
-//   const { fileName } = req.query
+  try {
+    // Upload the file to Cloudinary
+    const result = await cloudinary.uploader.upload(req.file.path)
 
-//   // Delete the image file
-//   fs.unlink(`client/public/images/${fileName}`, (error) => {
-//     if (error) {
-//       console.error(error)
-//     }
-//   })
-//   console.log(req.body)
-// })
+    // Retrieve the uploaded image URL
+    const imageUrl = result.secure_url
 
-app.post('/upload', (req, res) => {
-  // Handle the image upload and save it
-  // Generate a URL for the uploaded image
-  const imageUrl = 'https://example.com/path/to/uploaded/image.jpg'
-
-  res.json({ imageUrl })
+    // Return the imageUrl in the response
+    return res.json({ imageUrl })
+  } catch (error) {
+    console.error('Error uploading image:', error)
+    return res.status(500).json({ message: 'Image upload failed' })
+  } finally {
+    // Remove the uploaded file from the server
+    if (req.file.path) {
+      fs.unlinkSync(req.file.path)
+    }
+  }
 })
 
 if (process.env.NODE_ENV === 'production') {
@@ -121,7 +85,5 @@ if (process.env.NODE_ENV === 'production') {
 
 app.listen(
   PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.cyan
-  )
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 )
