@@ -58,7 +58,7 @@ const BlogpostScreen = () => {
   //       })
   //   }
   return (
-    <div style={{ height: '100vh' }}>
+    <div>
       {blogpost && blogpost && (
         <div
           className='main-container'
@@ -71,7 +71,7 @@ const BlogpostScreen = () => {
           <br />
 
           <sub>
-            &nbsp;&nbsp; - by Josh Claxton
+            &nbsp;&nbsp; - by Josh Claxton &nbsp; &nbsp;
             <img
               src={blogpost.submitUserImage}
               alt={blogpost.submitUser}

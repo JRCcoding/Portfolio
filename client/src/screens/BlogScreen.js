@@ -57,7 +57,18 @@ const Blog = () => {
               alt={blogpost.submitUser}
               style={{ height: '60px', borderRadius: '50%' }}
             /> */}
-                    <strong>- {blogpost.submitUser}</strong>
+                    <strong style={{ width: '500px' }}>
+                      &nbsp;&nbsp; - by Josh Claxton &nbsp; &nbsp;
+                      <img
+                        src={blogpost.submitUserImage}
+                        alt={blogpost.submitUser}
+                        style={{
+                          height: '40px',
+                          borderRadius: '50%',
+                          display: 'inline',
+                        }}
+                      />
+                    </strong>
                   </div>
 
                   <h6>{parse(blogpost.body.substring(0, 100))}...</h6>
