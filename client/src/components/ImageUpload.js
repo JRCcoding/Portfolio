@@ -41,7 +41,16 @@ const ImageUpload = ({ onImageUpload }) => {
       {imageUrl && imageUrl && (
         <div>
           <p>Image uploaded:</p>
-          <img src={imageUrl} alt='Uploaded' />
+          <img
+            src={imageUrl}
+            alt='Uploaded'
+            style={{
+              height: '50%',
+              width: '50%',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          />
         </div>
       )}
     </form>

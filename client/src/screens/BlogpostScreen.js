@@ -72,11 +72,11 @@ const BlogpostScreen = () => {
 
           <sub>
             &nbsp;&nbsp; - by Josh Claxton
-            {/* <img
-                src={blogpost.submitUserImage}
-                alt={blogpost.submitUser}
-                style={{ height: '40px', borderRadius: '50%' }}
-              /> */}
+            <img
+              src={blogpost.submitUserImage}
+              alt={blogpost.submitUser}
+              style={{ height: '40px', borderRadius: '50%', display: 'inline' }}
+            />
           </sub>
           <br />
           <br />

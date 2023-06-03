@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-import { Form } from 'react-bootstrap'
+import { FloatingLabel, Form } from 'react-bootstrap'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { useNavigate } from 'react-router-dom'
@@ -22,6 +22,7 @@ const NewBlogpostScreen = ({ history }) => {
   const [body, setBody] = useState('')
   const [description, setDescription] = useState('')
   const [uploadedImageUrl, setUploadedImageUrl] = useState('')
+  const [uploadedDescription, setUploadedDescription] = useState('')
 
   const handleImageUpload = (imageUrl) => {
     setUploadedImageUrl(imageUrl)
@@ -39,21 +40,21 @@ const NewBlogpostScreen = ({ history }) => {
       date,
       body,
       uploadedImageUrl,
+      uploadedDescription,
     }
     await axios.post(`/api/blogposts`, blogEntry).then(navigate('/blogs'))
   }
   const EditorModules = {
     toolbar: [
-      [{ header: '1' }, { header: '2' }, { font: [] }],
-      [{ size: [] }],
-      ['bold', 'italic', 'underline', 'strike', 'code-block'],
+      [{ header: 1 }, { header: 2 }, { size: [] }],
+      ['bold', 'italic', 'underline', 'strike', 'code-block', 'blockquote'],
       [
         { list: 'ordered' },
         { list: 'bullet' },
         { indent: '-1' },
         { indent: '+1' },
       ],
-      ['link', 'image', 'video'],
+      ['link', 'video'],
       ['clean'],
     ],
     clipboard: {
@@ -66,19 +67,18 @@ const NewBlogpostScreen = ({ history }) => {
    * See https://quilljs.com/docs/formats/
    */
   const EditorFormats = [
-    'header',
-    'font',
+    'headers',
     'size',
     'bold',
     'italic',
     'underline',
     'strike',
     'code-block',
+    'blockquote',
     'list',
     'bullet',
     'indent',
     'link',
-    'image',
     'video',
   ]
 
@@ -129,7 +129,19 @@ const NewBlogpostScreen = ({ history }) => {
           />
         </div>
         <ImageUpload onImageUpload={handleImageUpload} />
-        <h4 style={{ color: 'white' }}>{uploadedImageUrl}</h4>
+        {uploadedImageUrl && (
+          <>
+            <FloatingLabel label='Caption'>
+              <input
+                type='text'
+                value={uploadedDescription}
+                onChange={(e) => setUploadedDescription(e.target.value)}
+                placeholder='Caption'
+                style={{ width: '100%' }}
+              ></input>
+            </FloatingLabel>
+          </>
+        )}
 
         <button onClick={submitHandler} style={{ color: 'white' }}>
           Submit
