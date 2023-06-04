@@ -5,7 +5,7 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
 import { useNavigate } from 'react-router-dom'
 import ImageUpload from '../components/ImageUpload'
-import profimage from '../images/face.png'
+import profimage from '../images/face2.png'
 
 const NewBlogpostScreen = ({ history }) => {
   const [submitId, setSubmitId] = useState('jrccode')
@@ -48,12 +48,7 @@ const NewBlogpostScreen = ({ history }) => {
     toolbar: [
       [{ header: 1 }, { header: 2 }, { size: [] }],
       ['bold', 'italic', 'underline', 'strike', 'code-block', 'blockquote'],
-      [
-        { list: 'ordered' },
-        { list: 'bullet' },
-        { indent: '-1' },
-        { indent: '+1' },
-      ],
+      [{ list: 'ordered' }, { list: 'bullet' }],
       ['link', 'video'],
       ['clean'],
     ],
@@ -77,7 +72,6 @@ const NewBlogpostScreen = ({ history }) => {
     'blockquote',
     'list',
     'bullet',
-    'indent',
     'link',
     'video',
   ]

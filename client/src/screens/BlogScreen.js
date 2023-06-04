@@ -71,7 +71,19 @@ const Blog = () => {
                     </strong>
                   </div>
 
-                  <h6>{parse(blogpost.body.substring(0, 100))}...</h6>
+                  <h6>{parse(blogpost.body.substring(0, 100))}</h6>
+                  {blogpost.uploadedImageUrl && (
+                    <img
+                      src={blogpost.uploadedImageUrl}
+                      alt={blogpost.title}
+                      style={{
+                        height: '75px',
+                        width: 'auto',
+                        marginBottom: '2.5%',
+                        marginTop: '1.5%',
+                      }}
+                    />
+                  )}
                   <hr />
                 </div>
               </a>

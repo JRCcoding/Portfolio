@@ -2,6 +2,7 @@ import axios from 'axios'
 import parse from 'html-react-parser'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import '../styles/Blog.css'
 
 const BlogpostScreen = () => {
   const [blogpost, setBlogpost] = useState()
@@ -62,7 +63,7 @@ const BlogpostScreen = () => {
       {blogpost && blogpost && (
         <div
           className='main-container'
-          style={{ marginTop: '5%', padding: '5%' }}
+          style={{ marginTop: '5%', padding: '5%', minHeight: '100vh' }}
         >
           <h1 style={{ display: 'inline' }}>{blogpost.title}</h1>
           <strong style={{ display: 'inline', float: 'right' }}>
@@ -93,7 +94,7 @@ const BlogpostScreen = () => {
                       marginRight: 'auto',
                     }}
                   />
-                  {/* <strong
+                  <strong
                     style={{
                       width: '95%',
                       marginLeft: 'auto',
@@ -101,8 +102,8 @@ const BlogpostScreen = () => {
                       textAlign: 'center',
                     }}
                   >
-                    <i>{blogpost.upload.description}</i>
-                  </strong> */}
+                    <i>{blogpost.uploadedDescription}</i>
+                  </strong>
                 </div>
               </>
             )}
