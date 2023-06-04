@@ -14,7 +14,7 @@ const Blog = () => {
     fetchBlogposts()
   }, [])
   return (
-    <div id='blog' style={{ height: '100vh' }}>
+    <div id='blog' style={{ minHeight: '100vh' }}>
       <Icon
         icon='bx:code-alt'
         className='content-center text-white w-20 h-20 mx-auto mt-40 ml-0'
