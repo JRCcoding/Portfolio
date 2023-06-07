@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react'
 import { Col, Row } from 'react-bootstrap'
 import kk_ss from '../images/kk_ss.png'
-import lnc_ss from '../images/lnc_ss.png'
+import lnc_ss from '../images/lnc_ss_2.png'
 import poke_ss from '../images/poke_ss.png'
 import swapi_ss from '../images/swapi_ss.png'
 import '../styles/Work.css'
