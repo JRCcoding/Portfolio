@@ -10,8 +10,8 @@ const Contact = () => {
   if (state.succeeded) {
     return (
       <div className='thanks_message'>
-        Thank you so much for your interest! I will get back to you within as
-        soon as possible!
+        Thank you so much for your interest! I will get back to you as soon as
+        possible!
       </div>
     )
   }
