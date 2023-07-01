@@ -1,8 +1,9 @@
 .contact_MDBCard {
-    width: 75%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2%;
+    margin-top: 2.5%;
+    padding: 2% 5%;
 }
 .contact_title {
     margin-left: auto;

@@ -28,3 +28,14 @@ h2 {
 h1 {
     font-size: 40px!important;    
 }
+
+
+.webdeveloper {
+    font-size: 2.4rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .webdeveloper {
+        font-size: 4rem;
+    }
+}
