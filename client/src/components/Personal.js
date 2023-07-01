@@ -22,10 +22,10 @@ const Personal = () => {
           ></img> */}
           <p className='webdeveloper text-[rgb(0,175,145)]'>Web Developer</p>
           <p className='about_text'>
-            I am a <pre className='inline'>software engineer</pre>, I love
-            building beautifully functional websites and web applications. I
-            enjoy solving the problems that everyone else has issues figuring
-            out. I like making things work.
+            I am a <pre className='inline'>&lt;SoftwareEngineer&#47;&gt;</pre>,
+            Web Developer, Father. I love building beautifully functional
+            websites and web applications. I enjoy solving the problems that
+            everyone else has issues figuring out. I like making things work.
           </p>
         </div>
       </div>

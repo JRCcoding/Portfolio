@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react'
 import { Col, Row } from 'react-bootstrap'
+import ghLogo from '../images/github-mark-white.png'
 import kk_ss from '../images/kk_ss.png'
 import lnc_ss from '../images/lnc_ss_2.png'
 import poke_ss from '../images/poke_ss.png'
@@ -23,7 +24,20 @@ export default function Projects() {
             target='_blank'
             rel='noreferrer'
           >
-            <h2 className='text-white mt-20 text-center'>LNCtreats.com</h2>
+            <h2 className='text-white mt-20 text-center'>
+              LNCtreats.com
+              <a
+                href='https://github.com/jrccoding/lnctreats'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src={ghLogo}
+                  alt='Josh Claxton Github Repo'
+                  className='ghLogo'
+                />
+              </a>
+            </h2>
             <img
               src={lnc_ss}
               alt='Lauryns Next-door Cottage'
@@ -38,7 +52,20 @@ export default function Projects() {
             target='_blank'
             rel='noreferrer'
           >
-            <h2 className='text-white mt-20 text-center'>Personal Site</h2>
+            <h2 className='text-white mt-20 text-center'>
+              Personal Site
+              <a
+                href='https://github.com/jrccoding/portfolio'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src={ghLogo}
+                  alt='Josh Claxton Github Repo'
+                  className='ghLogo'
+                />
+              </a>
+            </h2>
             <img src={kk_ss} alt='kaitlyn king' className='work_img' />
           </a>
         </Col>
@@ -49,7 +76,20 @@ export default function Projects() {
             target='_blank'
             rel='noreferrer'
           >
-            <h2 className='text-white mt-20 text-center'>PokeAPI App</h2>
+            <h2 className='text-white mt-20 text-center'>
+              PokeAPI App
+              <a
+                href='https://github.com/jrccoding/pokeapp'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src={ghLogo}
+                  alt='Josh Claxton Github Repo'
+                  className='ghLogo'
+                />
+              </a>
+            </h2>
             <img
               src={poke_ss}
               alt='Pokemon App Josh Claxton'
@@ -64,7 +104,20 @@ export default function Projects() {
             target='_blank'
             rel='noreferrer'
           >
-            <h2 className='text-white mt-20 text-center'>Star Wars API App</h2>
+            <h2 className='text-white mt-20 text-center'>
+              Star Wars API App
+              <a
+                href='https://github.com/jrccoding/swapi-t'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src={ghLogo}
+                  alt='Josh Claxton Github Repo'
+                  className='ghLogo'
+                />
+              </a>
+            </h2>
             <img src={swapi_ss} alt='Star Wars API App' className='work_img' />
           </a>
         </Col>
