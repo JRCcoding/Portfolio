@@ -18,7 +18,7 @@ export default function Projects() {
         id='work'
       />{' '}
       <h1 className='text-center text-3xl text-white'>Work</h1>
-      <Row xs={1} sm={1} md={1} lg={1}>
+      <Row xs={1} sm={1} md={1} lg={2}>
         <Col className='mb-10'>
           <a
             href='https://lnctreats.com/'
@@ -104,7 +104,7 @@ export default function Projects() {
             rel='noreferrer'
           >
             <h2 className='text-white mt-20 text-center'>
-              Personal Site
+              Personal Site Template
               <a
                 href='https://github.com/jrccoding/portfolio'
                 target='_blank'

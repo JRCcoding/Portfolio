@@ -1,13 +1,12 @@
 import axios from 'axios'
 import parse from 'html-react-parser'
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import '../styles/Blog.css'
 
 const BlogpostScreen = () => {
   const [blogpost, setBlogpost] = useState()
   const { id } = useParams()
-  const navigate = useNavigate()
   useEffect(() => {
     const fetchBlogpost = async () => {
       const { data } = await axios
@@ -76,7 +75,7 @@ const BlogpostScreen = () => {
             <img
               src={blogpost.submitUserImage}
               alt={blogpost.submitUser}
-              style={{ height: '40px', borderRadius: '50%', display: 'inline' }}
+              style={{ height: '40px', borderRadius: '20%', display: 'inline' }}
             />
           </sub>
           <br />
