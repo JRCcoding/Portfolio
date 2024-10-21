@@ -4,7 +4,7 @@
   "type": "module",
   "description": "Claxton Software",
   "main": "index.js",
-  "homepage": "localhost:3000",
+  "homepage": "https://portfolio-2v9i.onrender.com/",
   "scripts": {
     "start": "node server/server",
     "server": "nodemon server/server",
