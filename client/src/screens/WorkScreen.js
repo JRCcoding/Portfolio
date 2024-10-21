@@ -72,30 +72,7 @@ export default function Projects() {
             <img src={nolimit_ss} alt='No Limit Fitness' className='work_img' />{' '}
           </a>
         </Col>
-        <Col className='mb-10'>
-          <a
-            href='https://kaylalakakes.com'
-            className='text-2xl no-underline text-white visited:text-white hover:text-green'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <h2 className='text-white mt-20 text-center'>
-              KaylalaKakes.com
-              <a
-                href='https://github.com/jrccoding/kayla_bakery'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <img
-                  src={ghLogo}
-                  alt='Josh Claxton Github Repo'
-                  className='ghLogo'
-                />
-              </a>
-            </h2>
-            <img src={kayla_ss} alt='Kaylala Kakes' className='work_img' />{' '}
-          </a>
-        </Col>
+
         <Col>
           <a
             href='https://jrccoding.github.io/KaitlynKing1.0/'

@@ -20,12 +20,13 @@ const Personal = () => {
             className='-mt-40 mb-40 mx-auto'
             id='about'
           ></img> */}
-          <p className='webdeveloper text-[rgb(0,175,145)]'>Web Developer</p>
+          <p className='webdeveloper' style={{ color: 'white' }}>
+            Claxton Software
+          </p>
           <p className='about_text'>
-            I am a <pre className='inline'>&lt;SoftwareEngineer&#47;&gt;</pre>,
-            Web Developer, Father. I love building beautifully functional
-            websites and web applications. I enjoy solving the problems that
-            everyone else has issues figuring out. I like making things work.
+            We are <pre className='inline'>&lt;SoftwareEngineers&#47;&gt;</pre>.
+            This is a broad term, but we use code as our tool to build anything
+            you can think of.
           </p>
         </div>
       </div>
