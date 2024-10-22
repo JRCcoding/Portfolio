@@ -26,7 +26,7 @@ export default function App() {
             </MDBNavbarLink>
           </MDBNavbarItem> */}
 
-          <MDBNavbarItem>
+          {/* <MDBNavbarItem>
             <MDBNavbarLink>
               <Link
                 to='/blogs'
@@ -35,7 +35,7 @@ export default function App() {
                 &nbsp;&nbsp;Blog&nbsp;&nbsp;
               </Link>
             </MDBNavbarLink>
-          </MDBNavbarItem>
+          </MDBNavbarItem> */}
           <MDBNavbarItem>
             <MDBNavbarLink>
               <Link
