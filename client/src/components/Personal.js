@@ -7,26 +7,19 @@ const Personal = () => {
   return (
     <Container>
       <div>
-        {/* <Icon
-          icon='bx:code-alt'
-          className='content-center text-white w-20 h-20 mx-auto ml-0'
-          id='personal'
-        />{' '} */}
-        {/* <h1 className='text-center text-white'>About</h1> */}
-        <div className='flex flex-column mt-40'>
-          {/* <img
-            src={face}
-            alt='Josh Claxton'
-            className='-mt-40 mb-40 mx-auto'
-            id='about'
-          ></img> */}
-          <p className='webdeveloper' style={{ color: 'white' }}>
-            Claxton Software
-          </p>
-          <p className='about_text'>
-            We are <pre className='inline'>&lt;SoftwareEngineers&#47;&gt;</pre>.
-            This is a broad term, but we use code as our tool to build anything
-            you can think of.
+        <div
+          className='flex flex-column mt-40'
+          style={{ marginBottom: '50%', textAlign: 'center' }}
+        >
+          <p className='about_text mb-2' style={{ marginTop: '-90px' }}>
+            WE ARE <pre className='inline'>&lt;SoftwareEngineers&#47;&gt;</pre>
+            &nbsp;who specialize in crafting beautiful, functional websites that
+            help small businesses thrive online. We're passionate about
+            empowering small businesses with the digital tools they need to
+            succeed. We're always exploring new ways to help businesses grow, so
+            stay tuned for exciting developments!
+            <br />
+            Contact us below to get started in the right direction!
           </p>
         </div>
       </div>

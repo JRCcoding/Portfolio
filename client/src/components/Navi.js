@@ -11,12 +11,27 @@ import { Link } from 'react-router-dom'
 
 export default function App() {
   return (
-    <MDBNavbar dark className=' bg-black opacity-95 text-white lg:scale-125'>
+    <MDBNavbar className='opacity-95 text-white '>
       <MDBContainer fluid>
-        <MDBNavbarNav className='text-white text-lg flex flex-row place-content-center '>
+        <MDBNavbarNav
+          className='text-white text-lg flex  flex-row place-content-end '
+          style={{ width: '100%' }}
+        >
           {/* <a href='/'> */}
-          <Link to='/' style={{ marginTop: 'auto', marginBottom: 'auto' }}>
-            <Icon icon='bx:code-alt' className='text-white w-5 h-5' />
+          <Link to='/' style={{ marginRight: 'auto' }}>
+            <h2 style={{ color: '#f2f2f2' }}>Claxton Software</h2>
+            {/* <Icon icon='bx:code-alt' className='text-white w-5 h-5' />
+            <p
+              style={{
+                fontSize: '10px',
+                textAlign: 'center',
+                margin: -10,
+                padding: 0,
+                color: 'white',
+              }}
+            >
+              Home
+            </p> */}
           </Link>
 
           {/* </a> */}
