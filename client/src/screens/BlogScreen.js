@@ -7,7 +7,9 @@ const Blog = () => {
   const [blogposts, setBlogposts] = useState()
   useEffect(() => {
     const fetchBlogposts = async () => {
-      const { data } = await axios.get('/api/blogposts')
+      const { data } = await axios.get(
+        'https://portfolio-ngtb.onrender.com/api/blogposts'
+      )
 
       setBlogposts(data)
     }
