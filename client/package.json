@@ -1,7 +1,12 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://localhost:3000/",
+  "homepage": "https://portfolio-2v9i.onrender.com/",
+"devServer": {
+    "compress": "true",
+    "disableHostCheck": "true",  
+
+ },
   "proxy": "http://localhost:5000",
   "dependencies": {
     "@auth0/auth0-react": "^2.1.0",
