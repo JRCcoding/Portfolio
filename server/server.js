@@ -26,7 +26,7 @@ app.use(cors())
 app.use('/api/blogposts', blogRoutes)
 // app.use('/upload')
 
-const PORT = process.env.PORT || 5000
+const PORT = 5050
 
 const today = new Date()
 const splitToday = JSON.stringify(today).split('-')
