@@ -9,7 +9,7 @@ import {
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function App() {
+export default function App({ isMobile }) {
   return (
     <MDBNavbar className='opacity-95 text-white '>
       <MDBContainer fluid>
@@ -18,8 +18,15 @@ export default function App() {
           style={{ width: '100%' }}
         >
           {/* <a href='/'> */}
-          <Link to='/' style={{ marginRight: 'auto' }}>
-            <h2 style={{ color: '#f2f2f2' }}>Claxton Software</h2>
+          <Link to='/' style={{ marginRight: 'auto' }} className='link-hover'>
+            <p
+              style={{
+                fontSize: isMobile ? 30 : 50,
+                margin: isMobile ? 5 : 15,
+              }}
+            >
+              Claxton Software
+            </p>
             {/* <Icon icon='bx:code-alt' className='text-white w-5 h-5' />
             <p
               style={{
@@ -55,7 +62,11 @@ export default function App() {
             <MDBNavbarLink>
               <Link
                 to='/skills'
-                style={{ textDecoration: 'none', color: '#f2f2f2' }}
+                style={{
+                  textDecoration: 'none',
+                  fontSize: isMobile ? 15 : 20,
+                }}
+                className='link-hover'
               >
                 &nbsp;&nbsp;Skills&nbsp;&nbsp;
               </Link>
@@ -65,7 +76,11 @@ export default function App() {
             <MDBNavbarLink>
               <Link
                 to='/work'
-                style={{ textDecoration: 'none', color: '#f2f2f2' }}
+                style={{
+                  textDecoration: 'none',
+                  fontSize: isMobile ? 15 : 20,
+                }}
+                className='link-hover'
               >
                 &nbsp;&nbsp;Work&nbsp;&nbsp;
               </Link>

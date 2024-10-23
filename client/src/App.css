@@ -59,4 +59,12 @@ h1 {
     }
 }
 
+.link-hover { 
+    color: #f2f2f2;
+    transition: color 0.3s ease;
+}
+
+.link-hover:hover {
+    color: #555;
+}
 

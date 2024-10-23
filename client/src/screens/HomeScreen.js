@@ -3,7 +3,7 @@ import React from 'react'
 import Contact from '../components/Contact'
 import Personal from '../components/Personal'
 import ScrollButton from '../components/ScrollButton'
-const HomeScreen = () => {
+const HomeScreen = ({ isMobile }) => {
   return (
     <div className='min-h-screen'>
       <Icon
