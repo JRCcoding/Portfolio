@@ -11,7 +11,7 @@ const HomeScreen = ({ isMobile }) => {
         className='content-centet text-white w-20 h-20 mx-auto mt-40 ml-0'
         id='home'
       />{' '}
-      <Personal />
+      <Personal style={{ marginBottom: '-50%' }} />
       <Contact />
       <ScrollButton />
     </div>

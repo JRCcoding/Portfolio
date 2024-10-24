@@ -7,9 +7,9 @@ import BlogpostScreen from './screens/BlogpostScreen'
 import Blog from './screens/BlogScreen'
 import HomeScreen from './screens/HomeScreen'
 import NewBlogpostScreen from './screens/NewBlogpostScreen'
-import Skills from './screens/SkillsScreen'
-import Work from './screens/WorkScreen'
+import ServicesScreen from './screens/ServicesScreen'
 import { useEffect, useState } from 'react'
+import 'animate.css'
 
 function App() {
   const useIsMobile = () => {
@@ -38,8 +38,7 @@ function App() {
           <Route path='/' exact element={<HomeScreen />} isMobile={isMobile} />
           <Route path='/blogposts/:id' element={<BlogpostScreen />} />
           <Route path='/blogs' element={<Blog />} />
-          <Route path='/skills' element={<Skills />} />
-          <Route path='/work' element={<Work />} />
+          <Route path='/services' element={<ServicesScreen />} />
           <Route path='/admin/new' element={<NewBlogpostScreen />} />
         </Routes>
       </div>

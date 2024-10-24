@@ -16,7 +16,7 @@ const Contact = () => {
     )
   }
   return (
-    <div className='no-underline text-black visited:text-black hover:text-black container mb-20'>
+    <div className='no-underline text-black visited:text-black hover:text-black container mb-20 '>
       <Icon
         icon='bx:code-alt'
         className='content-center text-white w-20 h-20 mx-auto'
@@ -26,7 +26,7 @@ const Contact = () => {
         Contact
       </h1>
 
-      <MDBCard className='contact_MDBCard'>
+      <MDBCard className='contact_MDBCard animate__animated animate__fadeInLeft'>
         <MDBCardBody className='contact_form text-[rgb(0,175,145)]'>
           <Form onSubmit={handleSubmit}>
             <FloatingLabel label='Name:'>
@@ -63,14 +63,16 @@ const Contact = () => {
             </FloatingLabel>
 
             <FloatingLabel label='Message:'>
-              <input
-                className='form-control '
+              <textarea
+                className='form-control'
                 id='message'
                 type='text'
                 name='message'
                 required
                 placeholder='Message:'
-              ></input>
+                rows='4'
+                style={{ height: '175px', paddingTop: '40px', resize: 'none' }}
+              ></textarea>
             </FloatingLabel>
 
             <div className='submit_container'>

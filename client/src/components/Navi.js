@@ -61,28 +61,14 @@ export default function App({ isMobile }) {
           <MDBNavbarItem>
             <MDBNavbarLink>
               <Link
-                to='/skills'
+                to='/services'
                 style={{
                   textDecoration: 'none',
                   fontSize: isMobile ? 15 : 20,
                 }}
                 className='link-hover'
               >
-                &nbsp;&nbsp;Skills&nbsp;&nbsp;
-              </Link>
-            </MDBNavbarLink>
-          </MDBNavbarItem>
-          <MDBNavbarItem>
-            <MDBNavbarLink>
-              <Link
-                to='/work'
-                style={{
-                  textDecoration: 'none',
-                  fontSize: isMobile ? 15 : 20,
-                }}
-                className='link-hover'
-              >
-                &nbsp;&nbsp;Work&nbsp;&nbsp;
+                &nbsp;&nbsp;Services&nbsp;&nbsp;
               </Link>
             </MDBNavbarLink>
           </MDBNavbarItem>

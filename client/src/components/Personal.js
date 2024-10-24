@@ -1,15 +1,13 @@
 import React from 'react'
-// import { Icon } from '@iconify/react'
 import { Container } from 'react-bootstrap'
-// import face from '../images/face.png'
 
 const Personal = () => {
   return (
     <Container>
       <div>
         <div
-          className='flex flex-column mt-40'
-          style={{ marginBottom: '50%', textAlign: 'center' }}
+          className='flex flex-column mt-40 animate__animated animate__fadeInLeft'
+          style={{ marginBottom: '15%', textAlign: 'center' }}
         >
           <p className='about_text mb-2' style={{ marginTop: '-90px' }}>
             WE ARE <pre className='inline'>&lt;SoftwareEngineers&#47;&gt;</pre>
