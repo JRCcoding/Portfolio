@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url'
 import blogRoutes from './Routes/blogRoutes.js'
 import DB from './db.js'
 import WebSocket from 'ws'
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import {
   getFirestore,
   collection,
@@ -20,7 +20,7 @@ import {
   orderBy,
   onSnapshot,
   serverTimestamp,
-} from 'firebase/firestore'
+} from 'firebase/compat/firestore'
 
 // https://res.cloudinary.com/<cloud_name>/image/upload/h_150,w_100/olympic_flag
 const __filename = fileURLToPath(import.meta.url)
