@@ -45,7 +45,7 @@ if (!firebase.getApps().length) {
   firebase.initializeApp(firebaseConfig)
 }
 
-const db = getFirestore()
+const db = firebase.firestore()
 
 const wss = new WebSocket.Server({ port })
 
@@ -77,14 +77,14 @@ wss.on('connection', function connection(ws) {
       try {
         const { userName, message, selectedRoom } = parsedData // Store the message in the correct chatroom subcollection
 
-        const messagesRef = collection(
-          db,
-          'chatrooms',
-          selectedRoom,
-          'messages'
-        )
+        // const messagesRef = collection(
+        //   db,
+        //   'chatrooms',
+        //   selectedRoom,
+        //   'messages'
+        // )
         const newMessageRef = doc(
-          collection(db, 'chatrooms', selectedRoom, 'messages')
+          db.collection(db, 'chatrooms', selectedRoom, 'messages')
         )
 
         await setDoc(newMessageRef, {
