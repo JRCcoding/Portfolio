@@ -14,22 +14,25 @@ import WebSocket from 'ws'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
 
-// https://res.cloudinary.com/<cloud_name>/image/upload/h_150,w_100/olympic_flag
+// Get the current directory
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 dotenv.config()
 
 const app = express()
+
+// Middleware
 app.use(express.json())
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({ extended: true })) // Set extended option
 app.use(bodyParser.json())
 DB()
 app.use(cors())
 app.use('/api/blogposts', blogRoutes)
-// app.use('/upload')
+
 const port = process.env.SERV_PORT || 8080
 
+// Firebase config and initialization
 const firebaseConfig = {
   apiKey: 'AIzaSyDGCTbnxm0nYMYsW1l2uotYNfVurpB_5m4',
   authDomain: 'claxton-chat-app.firebaseapp.com',
@@ -40,13 +43,14 @@ const firebaseConfig = {
   measurementId: 'G-DR8Z0NW0LS',
 }
 
-// Initialize Firebase
-if (!firebase.getApps().length) {
+// Initialize Firebase only if not already initialized
+if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig)
 }
 
 const db = firebase.firestore()
 
+// WebSocket server
 const wss = new WebSocket.Server({ port })
 
 wss.on('connection', function connection(ws) {
@@ -57,10 +61,14 @@ wss.on('connection', function connection(ws) {
 
     if (parsedData.type === 'joinRoom') {
       const { chatroom } = parsedData // Retrieve messages for the selected chatroom
+      const messagesRef = db
+        .collection('chatrooms')
+        .doc(chatroom)
+        .collection('messages')
+      const q = messagesRef.orderBy('timestamp', 'asc')
 
-      const messagesRef = collection(db, 'chatrooms', chatroom, 'messages') // Use chatroom here
-      const q = query(messagesRef, orderBy('timestamp', 'asc'))
-      onSnapshot(q, (snapshot) => {
+      // Listen to messages in the selected chatroom
+      q.onSnapshot((snapshot) => {
         const messageArray = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -75,25 +83,23 @@ wss.on('connection', function connection(ws) {
       })
     } else {
       try {
-        const { userName, message, selectedRoom } = parsedData // Store the message in the correct chatroom subcollection
+        const { userName, message, selectedRoom } = parsedData
 
-        // const messagesRef = collection(
-        //   db,
-        //   'chatrooms',
-        //   selectedRoom,
-        //   'messages'
-        // )
-        const newMessageRef = doc(
-          db.collection(db, 'chatrooms', selectedRoom, 'messages')
-        )
+        // Store the message in the correct chatroom subcollection
+        const newMessageRef = db
+          .collection('chatrooms')
+          .doc(selectedRoom)
+          .collection('messages')
+          .doc()
 
-        await setDoc(newMessageRef, {
+        await newMessageRef.set({
           userName,
           message,
-          timestamp: serverTimestamp(),
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           chatroom: selectedRoom,
-        }) // Broadcast the message
+        })
 
+        // Broadcast the message to all clients
         wss.clients.forEach(function each(client) {
           if (client.readyState === WebSocket.OPEN) {
             client.send(
@@ -112,22 +118,15 @@ wss.on('connection', function connection(ws) {
   })
 })
 
-console.log(`Websocket server started on port ${port}`)
+console.log(`WebSocket server started on port ${port}`)
 
-const PORT = process.env.PORT || 5000
-
-const today = new Date()
-const splitToday = JSON.stringify(today).split('-')
-const year = splitToday[0]
-const month = splitToday[1]
-const day = splitToday[2].substring(0, 2)
-const submitDate = month + '-' + day + '-' + year.substring(1, 5)
-// Configure Cloudinary
+// Cloudinary configuration
 cloudinary.config({
   cloud_name: 'dkarlgvva',
   api_key: '996256143699211',
   api_secret: '-00AoMnJ4tGQl1z9xi6ytMaS2lg',
 })
+
 // Set up multer storage using Cloudinary
 const storage = new CloudinaryStorage({
   cloudinary,
@@ -136,40 +135,41 @@ const storage = new CloudinaryStorage({
   transformation: [{ width: 500, height: 500, crop: 'limit' }],
 })
 
-// Set up multer middleware with the configured storage
-const upload = multer({ dest: 'uploads/' })
+// Set up multer middleware
+const upload = multer({ storage }) // Using Cloudinary storage directly
 
+// File upload route
 app.post('/upload', upload.single('file'), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ message: 'No file uploaded' })
   }
 
   try {
-    // Upload the file to Cloudinary
-    const result = await cloudinary.uploader.upload(req.file.path) // Retrieve the uploaded image URL
-
-    const imageUrl = result.secure_url // Return the imageUrl in the response
+    const result = await cloudinary.uploader.upload(req.file.path)
+    const imageUrl = result.secure_url // Retrieve the image URL from Cloudinary
 
     return res.json({ imageUrl })
   } catch (error) {
     console.error('Error uploading image:', error)
     return res.status(500).json({ message: 'Image upload failed' })
   } finally {
-    // Remove the uploaded file from the server
+    // Clean up the file from local storage
     if (req.file.path) {
       fs.unlinkSync(req.file.path)
     }
   }
 })
 
+// Serve static files for production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../client/build'))
+  app.use(express.static(path.resolve(__dirname, '../client/build')))
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'))
   })
 }
 
-app.listen(
-  PORT,
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-)
+})
