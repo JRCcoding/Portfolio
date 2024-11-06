@@ -51,7 +51,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore()
 
 // WebSocket server
-const wss = new WebSocket.Server({ port })
+const wss = new WebSocket.Server({ port }) // Initialize WebSocket server on specified port
 
 wss.on('connection', function connection(ws) {
   console.log('Client connected')
@@ -61,11 +61,12 @@ wss.on('connection', function connection(ws) {
 
     if (parsedData.type === 'joinRoom') {
       const { chatroom } = parsedData // Retrieve messages for the selected chatroom
+
       const messagesRef = db
         .collection('chatrooms')
         .doc(chatroom)
         .collection('messages')
-      const q = messagesRef.orderBy('timestamp', 'asc')
+      const q = messagesRef.orderBy('timestamp', 'asc') // Query messages ordered by timestamp
 
       // Listen to messages in the selected chatroom
       q.onSnapshot((snapshot) => {
@@ -83,9 +84,8 @@ wss.on('connection', function connection(ws) {
       })
     } else {
       try {
-        const { userName, message, selectedRoom } = parsedData
+        const { userName, message, selectedRoom } = parsedData // Store the message in the selected room
 
-        // Store the message in the correct chatroom subcollection
         const newMessageRef = db
           .collection('chatrooms')
           .doc(selectedRoom)
@@ -119,7 +119,6 @@ wss.on('connection', function connection(ws) {
 })
 
 console.log(`WebSocket server started on port ${port}`)
-
 // Cloudinary configuration
 cloudinary.config({
   cloud_name: 'dkarlgvva',
