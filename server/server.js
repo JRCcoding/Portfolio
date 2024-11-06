@@ -36,15 +36,6 @@ DB()
 app.use(cors())
 app.use('/api/blogposts', blogRoutes)
 // app.use('/upload')
-const {
-  getFirestore,
-  collection,
-  addDoc,
-  query,
-  orderBy,
-  onSnapshot,
-  serverTimestamp,
-} = require('firebase/firestore')
 const port = process.env.SERV_PORT || 8080
 
 const firebaseConfig = {
