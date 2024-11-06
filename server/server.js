@@ -91,7 +91,11 @@ wss.on('connection', function connection(ws) {
           selectedRoom,
           'messages'
         )
-        await setDoc(messagesRef, {
+        const newMessageRef = doc(
+          collection(db, 'chatrooms', selectedRoom, 'messages')
+        )
+
+        await setDoc(newMessageRef, {
           userName,
           message,
           timestamp: serverTimestamp(),
