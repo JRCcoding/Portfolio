@@ -15,7 +15,7 @@ import firebase from 'firebase/compat/app'
 import {
   getFirestore,
   collection,
-  addDoc,
+  setDoc,
   query,
   orderBy,
   onSnapshot,
@@ -91,7 +91,7 @@ wss.on('connection', function connection(ws) {
           selectedRoom,
           'messages'
         )
-        await addDoc(messagesRef, {
+        await setDoc(messagesRef, {
           userName,
           message,
           timestamp: serverTimestamp(),
