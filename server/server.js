@@ -25,6 +25,98 @@ DB()
 app.use(cors())
 app.use('/api/blogposts', blogRoutes)
 // app.use('/upload')
+const WebSocket = require('ws')
+const firebase = require('firebase/app')
+const {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  orderBy,
+  onSnapshot,
+  serverTimestamp,
+} = require('firebase/firestore')
+const port = process.env.SERV_PORT || 8080
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDGCTbnxm0nYMYsW1l2uotYNfVurpB_5m4',
+  authDomain: 'claxton-chat-app.firebaseapp.com',
+  projectId: 'claxton-chat-app',
+  storageBucket: 'claxton-chat-app.firebasestorage.app',
+  messagingSenderId: '204913829902',
+  appId: '1:204913829902:web:0c2febd9d0ae143694f45f',
+  measurementId: 'G-DR8Z0NW0LS',
+}
+
+// Initialize Firebase
+if (!firebase.getApps().length) {
+  firebase.initializeApp(firebaseConfig)
+}
+
+const db = getFirestore()
+
+const wss = new WebSocket.Server({ port })
+
+wss.on('connection', function connection(ws) {
+  console.log('Client connected')
+
+  ws.on('message', async (messageData) => {
+    const parsedData = JSON.parse(messageData)
+
+    if (parsedData.type === 'joinRoom') {
+      const { chatroom } = parsedData // Retrieve messages for the selected chatroom
+
+      const messagesRef = collection(db, 'chatrooms', chatroom, 'messages') // Use chatroom here
+      const q = query(messagesRef, orderBy('timestamp', 'asc'))
+      onSnapshot(q, (snapshot) => {
+        const messageArray = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        ws.send(
+          JSON.stringify({
+            type: 'pastMessages',
+            messages: messageArray,
+            chatroom: chatroom,
+          })
+        )
+      })
+    } else {
+      try {
+        const { userName, message, selectedRoom } = parsedData // Store the message in the correct chatroom subcollection
+
+        const messagesRef = collection(
+          db,
+          'chatrooms',
+          selectedRoom,
+          'messages'
+        )
+        await addDoc(messagesRef, {
+          userName,
+          message,
+          timestamp: serverTimestamp(),
+          chatroom: selectedRoom,
+        }) // Broadcast the message
+
+        wss.clients.forEach(function each(client) {
+          if (client.readyState === WebSocket.OPEN) {
+            client.send(
+              JSON.stringify({ userName, message, chatroom: selectedRoom })
+            )
+          }
+        })
+      } catch (error) {
+        console.error('Failed to handle message:', error)
+      }
+    }
+  })
+
+  ws.on('close', function close() {
+    console.log('Client disconnected')
+  })
+})
+
+console.log(`Websocket server started on port ${port}`)
 
 const PORT = process.env.PORT || 5000
 
@@ -58,12 +150,10 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
   try {
     // Upload the file to Cloudinary
-    const result = await cloudinary.uploader.upload(req.file.path)
+    const result = await cloudinary.uploader.upload(req.file.path) // Retrieve the uploaded image URL
 
-    // Retrieve the uploaded image URL
-    const imageUrl = result.secure_url
+    const imageUrl = result.secure_url // Return the imageUrl in the response
 
-    // Return the imageUrl in the response
     return res.json({ imageUrl })
   } catch (error) {
     console.error('Error uploading image:', error)
