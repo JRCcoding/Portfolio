@@ -10,6 +10,17 @@ import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import blogRoutes from './Routes/blogRoutes.js'
 import DB from './db.js'
+import WebSocket from 'ws'
+import firebase from 'firebase/app'
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  orderBy,
+  onSnapshot,
+  serverTimestamp,
+} from 'firebase/firestore'
 
 // https://res.cloudinary.com/<cloud_name>/image/upload/h_150,w_100/olympic_flag
 const __filename = fileURLToPath(import.meta.url)
@@ -25,8 +36,6 @@ DB()
 app.use(cors())
 app.use('/api/blogposts', blogRoutes)
 // app.use('/upload')
-const WebSocket = require('ws')
-const firebase = require('firebase/app')
 const {
   getFirestore,
   collection,
