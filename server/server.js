@@ -30,6 +30,8 @@ DB()
 app.use(cors())
 app.use('/api/blogposts', blogRoutes)
 
+const port = process.env.SERV_PORT || 8080
+
 // Firebase config and initialization
 const firebaseConfig = {
   apiKey: 'AIzaSyDGCTbnxm0nYMYsW1l2uotYNfVurpB_5m4',
@@ -48,15 +50,8 @@ if (!firebase.apps.length) {
 
 const db = firebase.firestore()
 
-// Define port as 8080
-const PORT = process.env.PORT || 8080
-
-// Start the server and attach WebSocket server to it
-const server = app.listen(PORT, () => {
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-})
-
-const wss = new WebSocketServer({ server }) // Attach WebSocketServer to HTTP server
+// WebSocket server
+const wss = new WebSocketServer({ port }) // Initialize WebSocket server on specified port
 
 wss.on('connection', function connection(ws) {
   console.log('Client connected')
@@ -123,6 +118,7 @@ wss.on('connection', function connection(ws) {
   })
 })
 
+console.log(`WebSocket server started on port ${port}`)
 // Cloudinary configuration
 cloudinary.config({
   cloud_name: 'dkarlgvva',
@@ -170,3 +166,9 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'))
   })
 }
+
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
+  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+})
