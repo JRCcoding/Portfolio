@@ -125,6 +125,16 @@ const Skills = () => {
               <img src={kk_ss} alt='kaitlyn king' className='work_img' />
             </a>
           </Col>
+        </Row>
+      </section>
+      <section className='mb-80'>
+        <Icon
+          icon='bx:code-alt'
+          className='content-center text-white w-20 h-20 mx-auto mt-40 ml-0'
+          id='work'
+        />{' '}
+        <h1 className='text-center text-3xl text-white'>Fun</h1>
+        <Row xs={1} sm={1} md={1} lg={2}>
           <Col className='mb-10'>
             <a
               href='https://jrcpokeapp.surge.sh'
