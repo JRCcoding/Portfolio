@@ -10,7 +10,7 @@ import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import blogRoutes from './Routes/blogRoutes.js'
 import DB from './db.js'
-import WebSocket from 'ws'
+import WebSocket, { WebSocketServer } from 'ws'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore'
 
@@ -51,7 +51,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore()
 
 // WebSocket server
-const wss = new WebSocket.Server({ port }) // Initialize WebSocket server on specified port
+const wss = new WebSocketServer({ port }) // Initialize WebSocket server on specified port
 
 wss.on('connection', function connection(ws) {
   console.log('Client connected')
