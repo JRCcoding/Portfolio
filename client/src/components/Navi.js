@@ -14,7 +14,7 @@ export default function App({ isMobile }) {
     <MDBNavbar className='opacity-95'>
       <MDBContainer fluid>
         <MDBNavbarNav
-          className='text-lg flex  flex-row place-content-end '
+          className='text-lg flex text-offwhite flex-row place-content-end '
           style={{ width: '100%' }}
         >
           {/* <a href='/'> */}

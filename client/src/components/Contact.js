@@ -27,7 +27,7 @@ const Contact = () => {
       </h1>
 
       <MDBCard className='contact_MDBCard animate__animated animate__fadeInLeft'>
-        <MDBCardBody className='contact_form text-[rgb(0,175,145)]'>
+        <MDBCardBody className='contact_form text-[#007bff]'>
           <Form onSubmit={handleSubmit}>
             <FloatingLabel label='Name:'>
               <input

@@ -10,6 +10,7 @@ import nolimit_ss from '../images/nolimit_ss.png'
 import poke_ss from '../images/poke_ss.png'
 import swapi_ss from '../images/swapi_ss.png'
 import '../styles/Work.css'
+import ScrollButton from '../components/ScrollButton'
 
 const Skills = () => {
   return (
@@ -170,6 +171,7 @@ const Skills = () => {
           </Col>
         </Row>
       </section>
+      <ScrollButton />
     </div>
   )
 }

@@ -11,10 +11,10 @@
     margin-right: auto;
 }
 .contact_submit {
-    color: rgb(0,175,145);
+    color: #007bff;
 }
 .contact_submit {
-    background-color: rgb(17, 187, 153)!important;
+    background-color: #007bff!important;
     color: white;
     border-radius: 15px;
     margin-top: 5%;
@@ -28,7 +28,7 @@
     height: 14rem;
 }
 .contact_submit:hover {
-    background-color: rgb(0, 140, 125)!important;
+    background-color: #007bff!important;
     box-shadow: 2px 2px 5px rgb(0,0,0,0.5);
 }
 @media only screen and (max-width: 600px) {

@@ -31,7 +31,7 @@ function App() {
   const isMobile = useIsMobile()
   return (
     <Router>
-      <div className='App  overflow-hidden'>
+      <div className='App bg-graydark text-offwhite overflow-hidden'>
         <Navi isMobile={isMobile} />
 
         <Routes>
