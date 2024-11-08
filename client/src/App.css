@@ -1,6 +1,5 @@
 .loginout {
     color: black;
-    background-color: white;
     border-radius: 45px;
     padding: 5px;
     float: right;
@@ -11,10 +10,7 @@
 }
 
 pre {
-    /* background: rgb(0,0,0,0.8);
-    color: white; */
-    background: white;
-    color: black;
+    border: 1px solid black;
     padding: .5%;
     border-radius: 7.5px;
     width: 65%;
@@ -40,7 +36,6 @@ h1 {
 }
 
 .about_text {
-    color: white;
     text-indent: 15px;
 }
 
@@ -60,11 +55,16 @@ h1 {
 }
 
 .link-hover { 
-    color: #f2f2f2;
     transition: color 0.3s ease;
 }
 
 .link-hover:hover {
-    color: rgb(17, 187, 153);
+    color: #3a3a3a;
 }
 
+.animateDelay1 {
+    animation-delay: 1s;
+}
+.animateDelay2 {
+    animation-delay: 2s;
+}

@@ -19,10 +19,10 @@ const Blog = () => {
     <div id='blog'>
       <Icon
         icon='bx:code-alt'
-        className='content-center text-white w-20 h-20 mx-auto mt-40 ml-0'
+        className='content-center  w-20 h-20 mx-auto mt-40 ml-0'
         id='blog'
       />{' '}
-      <h1 className='text-center text-3xl text-white'>Blog</h1>
+      <h1 className='text-center text-3xl '>Blog</h1>
       <div
         className='main-container'
         style={{ marginTop: '5%', padding: '5%' }}

@@ -8,7 +8,7 @@ const HomeScreen = ({ isMobile }) => {
     <div className='min-h-screen'>
       <Icon
         icon='bx:code-alt'
-        className='content-centet text-white w-20 h-20 mx-auto mt-40 ml-0'
+        className='content-centet  w-20 h-20 mx-auto mt-40 ml-0'
         id='home'
       />{' '}
       <Personal style={{ marginBottom: '-50%' }} />
