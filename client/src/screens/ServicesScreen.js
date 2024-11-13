@@ -70,8 +70,8 @@ const Skills = () => {
               style={{
                 marginTop: 175,
                 height: 55,
-                marginLeft: '25%',
-                marginRight: '25%',
+                marginLeft: '20%',
+                marginRight: '20%',
               }}
             >
               Contact Us Now!

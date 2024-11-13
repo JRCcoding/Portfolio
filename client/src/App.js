@@ -38,7 +38,7 @@ function App() {
           <Route path='/' exact element={<HomeScreen />} isMobile={isMobile} />
           <Route path='/blogposts/:id' element={<BlogpostScreen />} />
           <Route path='/blogs' element={<Blog />} />
-          <Route path='/services' element={<ServicesScreen />} />
+          <Route path='/services' element={<ServicesScreen />} isMobile={isMobile}/>
           <Route path='/admin/new' element={<NewBlogpostScreen />} />
         </Routes>
       </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 
 const Personal = () => {
@@ -7,16 +7,23 @@ const Personal = () => {
       <div>
         <div
           className='flex flex-column mt-40 animate__animated animate__fadeInLeft'
-          style={{ marginBottom: '15%', textAlign: 'center' }}
+          style={{
+            marginBottom: '15%',
+            textAlign: 'center',
+          }}
         >
           <p className='about_text mb-2' style={{ marginTop: '-90px' }}>
             <span style={{ fontSize: 35, fontWeight: 'bold' }}>
               WE ARE{' '}
-              <pre className='inline' style={{ color: '#007bff ' }}>
+              <pre
+                className='inline'
+                style={{ color: '#007bff ', fontSize: 30 }}
+              >
                 &lt;SoftwareEngineers&#47;&gt;
               </pre>
             </span>
-            &nbsp;who specialize in crafting beautiful, functional websites that
+            <br />
+            &nbsp;We specialize in crafting beautiful, functional websites that
             help small businesses thrive online. We're passionate about
             empowering small businesses with the digital tools they need to
             succeed.
@@ -29,6 +36,7 @@ const Personal = () => {
             <span style={{ fontSize: 28, fontWeight: 'bold' }}>
               Contact us below
             </span>{' '}
+            <br />
             to get started in the right direction!
           </p>
         </div>
