@@ -12,6 +12,14 @@ const HomeScreen = ({ isMobile }) => {
         id='home'
       />{' '}
       <Personal style={{ marginBottom: '-50%' }} />
+      <Icon
+        icon='bx:code-alt'
+        className='content-center text-white w-20 h-20 mx-auto'
+        id='skills'
+      />
+      <h1 className='text-center text-3xl text-white' id='contact'>
+        Contact
+      </h1>
       <Contact />
       <ScrollButton />
     </div>

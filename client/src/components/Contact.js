@@ -17,15 +17,6 @@ const Contact = () => {
   }
   return (
     <div className='no-underline text-black visited:text-black hover:text-black container mb-20 '>
-      <Icon
-        icon='bx:code-alt'
-        className='content-center text-white w-20 h-20 mx-auto'
-        id='skills'
-      />
-      <h1 className='text-center text-3xl text-white' id='contact'>
-        Contact
-      </h1>
-
       <MDBCard className='contact_MDBCard animate__animated animate__fadeInLeft'>
         <MDBCardBody className='contact_form text-[#007bff]'>
           <Form onSubmit={handleSubmit}>

@@ -1,9 +1,8 @@
 import { Icon } from '@iconify/react'
 import 'animate.css'
-import React from 'react'
+import React, { useState } from 'react'
 import { skills } from '../data'
-import { Col, Container, Row } from 'react-bootstrap'
-import ghLogo from '../images/github-mark-white.png'
+import { Button, Col, Container, Row } from 'react-bootstrap'
 import kk_ss from '../images/kk_ss.png'
 import lnc_ss from '../images/lnc_ss_2.png'
 import nolimit_ss from '../images/nolimit_ss.png'
@@ -11,8 +10,15 @@ import poke_ss from '../images/poke_ss.png'
 import swapi_ss from '../images/swapi_ss.png'
 import '../styles/Work.css'
 import ScrollButton from '../components/ScrollButton'
+import Contact from '../components/Contact'
 
 const Skills = () => {
+  const [hidden, setHidden] = useState(true)
+
+  const onClickContact = () => {
+    setHidden(!hidden)
+  }
+
   return (
     <div className='min-h-screen'>
       <Container>
@@ -56,6 +62,23 @@ const Skills = () => {
               truly immersive digital journey for your visitors. Let us help you
               transform your vision into a breathtaking online reality.
             </p>
+            <Button
+              variant='primary'
+              size='lg'
+              onClick={onClickContact}
+              hidden={!hidden}
+              style={{
+                marginTop: 175,
+                height: 55,
+                marginLeft: '25%',
+                marginRight: '25%',
+              }}
+            >
+              Contact Us Now!
+            </Button>
+            <div hidden={hidden}>
+              <Contact />
+            </div>
           </div>
         </div>
       </Container>
@@ -89,7 +112,7 @@ const Skills = () => {
           <Col className='mb-10'>
             <a
               href='https://lnctreats.com/'
-              className='text-2xl no-underline  visited: hover:text-green'
+              className='text-2xl no-underline  visited: hover:text-blue'
               target='_blank'
               rel='noreferrer'
             >
@@ -105,7 +128,7 @@ const Skills = () => {
           <Col className='mb-10'>
             <a
               href='https://nolimitfitness.us'
-              className='text-2xl no-underline  visited: hover:text-green'
+              className='text-2xl no-underline  visited: hover:text-blue'
               target='_blank'
               rel='noreferrer'
             >
@@ -121,7 +144,7 @@ const Skills = () => {
           <Col>
             <a
               href='https://jrccoding.github.io/KaitlynKing1.0/'
-              className='text-2xl no-underline  visited: hover:text-green'
+              className='text-2xl no-underline  visited: hover:text-blue'
               target='_blank'
               rel='noreferrer'
             >
@@ -142,7 +165,7 @@ const Skills = () => {
           <Col className='mb-10'>
             <a
               href='https://jrcpokeapp.surge.sh'
-              className='text-2xl no-underline  visited: hover:text-green'
+              className='text-2xl no-underline  visited: hover:text-blue'
               target='_blank'
               rel='noreferrer'
             >
@@ -157,7 +180,7 @@ const Skills = () => {
           <Col>
             <a
               href='https://jrcswapi.surge.sh/'
-              className='text-2xl no-underline  visited: hover:text-green'
+              className='text-2xl no-underline  visited: hover:text-blue'
               target='_blank'
               rel='noreferrer'
             >
