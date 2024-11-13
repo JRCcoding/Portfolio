@@ -11,7 +11,10 @@ import { Link } from 'react-router-dom'
 
 export default function App({ isMobile }) {
   return (
-    <MDBNavbar className='opacity-95'>
+    <MDBNavbar
+      className='opacity-95'
+      // style={{ borderBottom: '1px solid #007bff' }}
+    >
       <MDBContainer fluid>
         <MDBNavbarNav
           className='text-lg flex text-offwhite flex-row place-content-end '

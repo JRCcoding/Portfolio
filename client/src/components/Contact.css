@@ -1,55 +1,55 @@
 .contact_MDBCard {
-    width: 55%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.5%;
-    padding: 2% 5%;
-    animation-delay: .5s;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5%;
+  padding: 2% 5%;
+  animation-delay: 0.5s;
 }
 .contact_title {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact_submit {
-    color: #007bff;
+  color: #007bff;
 }
 .contact_submit {
-    background-color: #007bff!important;
-    color: white;
-    border-radius: 15px;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px 15px;
-    font-size: 1.5rem;
-    transition: all 1s;
+  background-color: #007bff !important;
+  color: white;
+  border-radius: 15px;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 15px;
+  font-size: 1.5rem;
+  transition: all 1s;
 }
 .message_box {
-    height: 14rem;
+  height: 14rem;
 }
 .contact_submit:hover {
-    background-color: #007bff!important;
-    box-shadow: 2px 2px 5px rgb(0,0,0,0.5);
+  background-color: #007bff !important;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 600px) {
-    .work_img {
-        width: 100%;
-    }
-    .contact_MDBCard {
-        width: 95%;
-    }
+  .work_img {
+    width: 100%;
+  }
+  .contact_MDBCard {
+    width: 95%;
+  }
 }
 
 .submit_container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .thanks_message {
-    background-color: white;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 2rem;
-    transition: all 1s;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  transition: all 1s;
 }
