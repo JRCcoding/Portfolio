@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 
-const Personal = () => {
+const Personal = ({ isMobile }) => {
   return (
     <Container>
       <div>
@@ -17,11 +17,12 @@ const Personal = () => {
               WE ARE{' '}
               <pre
                 className='inline'
-                style={{ color: '#007bff ', fontSize: 30 }}
+                style={{ color: '#007bff ', fontSize: 25 }}
               >
                 &lt;SoftwareEngineers&#47;&gt;
               </pre>
             </span>
+            <br />
             <br />
             &nbsp;We specialize in crafting beautiful, functional websites that
             help small businesses thrive online. We're passionate about

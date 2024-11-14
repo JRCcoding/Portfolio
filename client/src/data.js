@@ -1,10 +1,8 @@
-// import kaitlynimage from './images/kaitlyn.png'
-
 export const skills = [
-  'ReactJS',
-  'NodeJS',
-  'ExpressJS',
-  'MongoDB',
-  'NextJS',
-  'CSS',
+  'User Interface',
+  'Admin Dashboard',
+  'Product Sales',
+  'Inventory Management',
+  'Business Card Site',
+  'Anything Else!',
 ]
