@@ -2,7 +2,7 @@ import { useForm } from '@formspree/react'
 import { Icon } from '@iconify/react'
 import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit'
 import React from 'react'
-import { FloatingLabel, Form } from 'react-bootstrap'
+import { Button, FloatingLabel, Form } from 'react-bootstrap'
 import './Contact.css'
 
 const Contact = () => {
@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <div className='no-underline text-black visited:text-black hover:text-black container mb-20 '>
       <MDBCard className='contact_MDBCard animate__animated animate__fadeInLeft'>
-        <MDBCardBody className='contact_form text-[#007bff]'>
+        <MDBCardBody className='contact_form text-[#72B01D]'>
           <Form onSubmit={handleSubmit}>
             <FloatingLabel label='Name:'>
               <input
@@ -67,13 +67,15 @@ const Contact = () => {
             </FloatingLabel>
 
             <div className='submit_container'>
-              <button
+              <Button
                 type='submit'
                 className='contact_submit'
+                variant='success'
+                style={{ backgroundColor: '#72B01D!important' }}
                 disabled={state.submitting}
               >
                 Send to Claxton Software
-              </button>
+              </Button>
             </div>
           </Form>
         </MDBCardBody>

@@ -14,7 +14,7 @@ export default function App({ isMobile }) {
     <MDBNavbar
       class='fixed-top'
       style={{
-        borderBottom: '1px solid #007bff',
+        borderBottom: '1px solid #72B01D',
         display: 'fixed',
         background: 'black',
         opacity: '80%',

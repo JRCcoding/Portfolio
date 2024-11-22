@@ -54,11 +54,11 @@ h1 {
 
 .link-hover {
   transition: color 0.3s ease;
-  color: white;
+  color: F3EFF5;
 }
 
 .link-hover:hover {
-  color: #007bff;
+  color: #72b01d;
 }
 
 .animateDelay1 {

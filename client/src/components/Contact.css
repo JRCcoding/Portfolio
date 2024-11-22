@@ -27,8 +27,13 @@
 .message_box {
   height: 14rem;
 }
+.contact_submit {
+  color: #f3eff5;
+  background-color: #72b01d !important;
+  border: none;
+}
 .contact_submit:hover {
-  background-color: #007bff !important;
+  background-color: #72b01d !important;
   box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 600px) {

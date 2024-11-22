@@ -10,6 +10,7 @@ const Personal = ({ isMobile }) => {
           style={{
             marginBottom: '15%',
             textAlign: 'center',
+            color: '#F3EFF5',
           }}
         >
           <p className='about_text mb-2' style={{ marginTop: '-90px' }}>
@@ -17,7 +18,7 @@ const Personal = ({ isMobile }) => {
               WE ARE{' '}
               <pre
                 className='inline'
-                style={{ color: '#007bff ', fontSize: 25 }}
+                style={{ color: '#72B01D ', fontSize: 25 }}
               >
                 &lt;SoftwareEngineers&#47;&gt;
               </pre>
