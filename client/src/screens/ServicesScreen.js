@@ -154,7 +154,7 @@ const Skills = () => {
               <span className='title-font font-medium'>{skill}</span>
             </div>
             {activeCard === skill && (
-              <div className='mt-2 border rounded p-4 animate__animated animate__fadeInUp'>
+              <div className='mt-2 border bg-black rounded p-4 animate__animated animate__fadeInUp'>
                 <h3>{skillDetails[skill].title}</h3>
                 <p>{skillDetails[skill].description}</p>
                 {/* You can add an image here if needed */}
