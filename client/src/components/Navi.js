@@ -17,7 +17,7 @@ export default function App({ isMobile }) {
         borderBottom: '1px solid #007bff',
         display: 'fixed',
         background: 'black',
-        opacity: '75%',
+        opacity: '80%',
       }}
     >
       <MDBContainer fluid>
@@ -49,6 +49,21 @@ export default function App({ isMobile }) {
               </Link>
             </MDBNavbarLink>
           </MDBNavbarItem>
+
+          {/* <MDBNavbarItem>
+            <MDBNavbarLink>
+              <Link
+                to='/chat'
+                style={{
+                  textDecoration: 'none',
+                  fontSize: isMobile ? 15 : 20,
+                }}
+                className='link-hover'
+              >
+                &nbsp;&nbsp;Chat&nbsp;&nbsp;
+              </Link>
+            </MDBNavbarLink>
+          </MDBNavbarItem> */}
         </MDBNavbarNav>
       </MDBContainer>
     </MDBNavbar>

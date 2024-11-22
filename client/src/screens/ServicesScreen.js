@@ -11,12 +11,62 @@ import swapi_ss from '../images/swapi_ss.png'
 import '../styles/Work.css'
 import ScrollButton from '../components/ScrollButton'
 import Contact from '../components/Contact'
+import '../App.css'
+import ui from '../images/ui.jpg'
+import adminDashboard from '../images/admin-dashboard.png'
+import ps from '../images/ps.jpg'
+import bcs from '../images/bcs.webp'
+import im from '../images/im.png'
+import ae from '../images/ae.webp'
 
 const Skills = () => {
   const [hidden, setHidden] = useState(true)
+  const [activeCard, setActiveCard] = useState(null)
 
   const onClickContact = () => {
     setHidden(!hidden)
+  }
+  const handleCardClick = (skill) => {
+    setActiveCard(activeCard === skill ? null : skill)
+  }
+
+  const skillDetails = {
+    'User Interface': {
+      title: 'User Interface',
+      description:
+        'Craft beautiful and intuitive user interfaces that delight your users.',
+      image: ui,
+    },
+    'Product Sales': {
+      title: 'Product Sales',
+      description:
+        'Develop e-commerce solutions to boost your product sales and reach a wider audience.',
+      image: ps,
+    },
+    'Business Card Site': {
+      title: 'Business Card Site',
+      description:
+        'Create a professional online presence with a sleek and informative business card site.',
+      image: bcs,
+    },
+    'Admin Dashboard': {
+      title: 'Admin Dashboard',
+      description:
+        'Manage your operations efficiently with a custom-built admin dashboard tailored to your needs.',
+      image: adminDashboard,
+    },
+    'Inventory Management': {
+      title: 'Inventory Management',
+      description:
+        'Keep track of your inventory with ease and accuracy using a robust inventory management system.',
+      image: im,
+    },
+    'Anything Else!': {
+      title: 'Anything Else!',
+      description:
+        "Have a unique project in mind? Let's discuss your needs and bring your vision to life!",
+      image: ae,
+    },
   }
 
   return (
@@ -72,6 +122,8 @@ const Skills = () => {
                 height: 55,
                 marginLeft: '20%',
                 marginRight: '20%',
+                background: 'black',
+                border: 'white 1px solid',
               }}
             >
               Contact Us Now!
@@ -87,21 +139,34 @@ const Skills = () => {
         className='content-center  w-20 h-20 mx-auto mt-40 ml-0'
         id='skills'
       />{' '}
-      <h1 className='text-center text-3xl '>Skills</h1>
+      <h1 className='text-center text-3xl mb-20 '>Features</h1>
       <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-80'>
         {skills.map((skill) => (
           <div key={skill} className='p-2 sm:w-full lg:w-1/2'>
-            <div className='rounded flex p-4 items-center border bg-black'>
+            <div
+              className='rounded flex p-4 items-center border bg-black cursor-pointer'
+              onClick={() => handleCardClick(skill)}
+            >
               <Icon
                 icon='akar-icons:circle-check-fill'
-                className=' h-5 w-5  md:h-6 flex-shrink-0 mr-4'
+                className='h-5 w-5 md:h-6 flex-shrink-0 mr-4'
               />
-              <span className='title-font font-medium '>{skill}</span>
+              <span className='title-font font-medium'>{skill}</span>
             </div>
+            {activeCard === skill && (
+              <div className='mt-2 border rounded p-4 animate__animated animate__fadeInUp'>
+                <h3>{skillDetails[skill].title}</h3>
+                <p>{skillDetails[skill].description}</p>
+                {/* You can add an image here if needed */}
+                {skillDetails[skill].image && (
+                  <img src={skillDetails[skill].image} alt={skill} />
+                )}
+              </div>
+            )}
           </div>
         ))}
       </div>
-      <section className='mb-80'>
+      {/* <section className='mb-80'>
         <Icon
           icon='bx:code-alt'
           className='content-center  w-20 h-20 mx-auto mt-40 ml-0'
@@ -193,7 +258,7 @@ const Skills = () => {
             </a>
           </Col>
         </Row>
-      </section>
+      </section> */}
       <ScrollButton />
     </div>
   )

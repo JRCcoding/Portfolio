@@ -1,70 +1,74 @@
 .loginout {
-    color: black;
-    border-radius: 45px;
-    padding: 5px;
-    float: right;
+  color: black;
+  border-radius: 45px;
+  padding: 5px;
+  float: right;
 }
 
 #home {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 pre {
-    padding: .5%;
-    border-radius: 7.5px;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 0.5%;
+  border-radius: 7.5px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
 }
 p {
-    margin: auto 5%;
+  margin: auto 5%;
 }
 h2 {
-    font-size: 28px!important;
+  font-size: 28px !important;
 }
 h1 {
-    font-size: 40px!important;    
+  font-size: 40px !important;
 }
 
-
 .webdeveloper {
-    font-size: 2.4rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -10%;
+  font-size: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10%;
 }
 
 .about_text {
-    text-indent: 15px;
+  text-indent: 15px;
 }
 
 .ghLogo {
-    height: 25px;
-    display: inline;
-    margin: .5%;
+  height: 25px;
+  display: inline;
+  margin: 0.5%;
 }
 
 @media only screen and (min-width: 600px) {
-    .webdeveloper {
-        font-size: 4rem;
-    }
-    .about_text {
-        font-size: 1.5rem;
-    }
+  .webdeveloper {
+    font-size: 4rem;
+  }
+  .about_text {
+    font-size: 1.5rem;
+  }
 }
 
-.link-hover { 
-    transition: color 0.3s ease;
-    color: white;
+.link-hover {
+  transition: color 0.3s ease;
+  color: white;
 }
 
 .link-hover:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 .animateDelay1 {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 .animateDelay2 {
-    animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.smooth-animation {
+  transition: all !important;
+  animation-duration: 2s !important;
 }

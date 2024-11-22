@@ -8,6 +8,7 @@ import Blog from './screens/BlogScreen'
 import HomeScreen from './screens/HomeScreen'
 import NewBlogpostScreen from './screens/NewBlogpostScreen'
 import ServicesScreen from './screens/ServicesScreen'
+import ChatScreen from './screens/ChatScreen'
 import { useEffect, useState } from 'react'
 import 'animate.css'
 
@@ -31,7 +32,10 @@ function App() {
   const isMobile = useIsMobile()
   return (
     <Router>
-      <div className='App bg-black text-offwhite overflow-hidden'>
+      <div
+        className='App text-offwhite overflow-hidden'
+        style={{ background: '#0D0A0B' }}
+      >
         <Navi isMobile={isMobile} />
 
         <Routes>
@@ -44,6 +48,7 @@ function App() {
             isMobile={isMobile}
           />
           <Route path='/admin/new' element={<NewBlogpostScreen />} />
+          <Route path='/chat' element={<ChatScreen />} />
         </Routes>
       </div>
     </Router>
