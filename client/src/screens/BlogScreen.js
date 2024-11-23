@@ -22,9 +22,11 @@ const Blog = () => {
         className='content-center  w-20 h-20 mx-auto mt-40 ml-0'
         id='blog'
       />{' '}
-      <h1 className='text-center text-3xl '>Blog</h1>
+      <h1 className='text-center text-3xl animate__animated animate__fadeInLeft'>
+        Blog
+      </h1>
       <div
-        className='main-container'
+        className='main-container  animate__animated animate__fadeInRight'
         style={{ marginTop: '5%', padding: '5%' }}
       >
         {/* <h2
@@ -45,7 +47,9 @@ const Blog = () => {
               >
                 <div>
                   <h5>{blogpost.date}</h5>
-                  <h4 style={{ display: 'inline' }}>{blogpost.title}</h4>
+                  <h4 style={{ display: 'inline', fontWeight: 'bold' }}>
+                    {blogpost.title}
+                  </h4>
                   <div
                     style={{
                       display: 'inline',
@@ -54,26 +58,18 @@ const Blog = () => {
                       float: 'right',
                     }}
                   >
-                    {/* <img
-              src={blogpost.submitUserImage}
-              alt={blogpost.submitUser}
-              style={{ height: '60px', borderRadius: '50%' }}
-            /> */}
-                    <strong style={{ width: '500px' }}>
-                      &nbsp;&nbsp; - by Josh Claxton &nbsp; &nbsp;
-                      <img
-                        src={blogpost.submitUserImage}
-                        alt={blogpost.submitUser}
-                        style={{
-                          height: '40px',
-                          borderRadius: '20%',
-                          display: 'inline',
-                        }}
-                      />
-                    </strong>
+                    <img
+                      src={blogpost.submitUserImage}
+                      alt={blogpost.submitUser}
+                      style={{
+                        height: '40px',
+                        borderRadius: '20%',
+                        display: 'inline',
+                      }}
+                    />
                   </div>
 
-                  <h6>{parse(blogpost.body.substring(0, 100))}</h6>
+                  <h6>{parse(blogpost.body.substring(0, 100))}...</h6>
                   {blogpost.uploadedImageUrl && (
                     <img
                       src={blogpost.uploadedImageUrl}

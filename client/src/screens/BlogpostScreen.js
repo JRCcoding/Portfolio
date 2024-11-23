@@ -106,7 +106,11 @@ const BlogpostScreen = () => {
                 </div>
               </>
             )}
-            {parse(blogpost.body)}
+            <div
+              style={{ width: '70%', marginLeft: 'auto', marginRight: 'auto' }}
+            >
+              {parse(blogpost.body)}
+            </div>
           </div>
         </div>
       )}

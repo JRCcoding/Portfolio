@@ -50,20 +50,20 @@ export default function App({ isMobile }) {
             </MDBNavbarLink>
           </MDBNavbarItem>
 
-          {/* <MDBNavbarItem>
+          <MDBNavbarItem>
             <MDBNavbarLink>
               <Link
-                to='/chat'
+                to='/blogs'
                 style={{
                   textDecoration: 'none',
                   fontSize: isMobile ? 15 : 20,
                 }}
                 className='link-hover'
               >
-                &nbsp;&nbsp;Chat&nbsp;&nbsp;
+                &nbsp;&nbsp;Blog&nbsp;&nbsp;
               </Link>
             </MDBNavbarLink>
-          </MDBNavbarItem> */}
+          </MDBNavbarItem>
         </MDBNavbarNav>
       </MDBContainer>
     </MDBNavbar>
