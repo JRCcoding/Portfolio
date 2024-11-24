@@ -45,12 +45,12 @@ export default function App({ isMobile }) {
                 }}
                 className='link-hover'
               >
-                &nbsp;&nbsp;What We Do&nbsp;&nbsp;
+                &nbsp;&nbsp;About&nbsp;&nbsp;
               </Link>
             </MDBNavbarLink>
           </MDBNavbarItem>
 
-          <MDBNavbarItem>
+          {/* <MDBNavbarItem>
             <MDBNavbarLink>
               <Link
                 to='/blogs'
@@ -63,7 +63,7 @@ export default function App({ isMobile }) {
                 &nbsp;&nbsp;Blog&nbsp;&nbsp;
               </Link>
             </MDBNavbarLink>
-          </MDBNavbarItem>
+          </MDBNavbarItem> */}
         </MDBNavbarNav>
       </MDBContainer>
     </MDBNavbar>
