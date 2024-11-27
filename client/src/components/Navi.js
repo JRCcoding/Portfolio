@@ -45,7 +45,7 @@ export default function App({ isMobile }) {
                 }}
                 className='link-hover'
               >
-                &nbsp;&nbsp;About&nbsp;&nbsp;
+                &nbsp;&nbsp;Services&nbsp;&nbsp;
               </Link>
             </MDBNavbarLink>
           </MDBNavbarItem>
