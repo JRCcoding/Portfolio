@@ -54,7 +54,7 @@ h1 {
 
 .link-hover {
   transition: color 0.3s ease;
-  color: F3EFF5;
+  color: #F3EFF5;
 }
 
 .link-hover:hover {

@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Container } from 'react-bootstrap'
+import consultation from '../images/consultation.jpg'
 
 const Personal = ({ isMobile }) => {
   return (
@@ -14,14 +15,10 @@ const Personal = ({ isMobile }) => {
           }}
         >
           <p className='about_text mb-2' style={{ marginTop: '-90px' }}>
-            <span style={{ fontSize: 35, fontWeight: 'bold' }}>
-              WE ARE{' '}
-              <pre
-                className='inline'
-                style={{ color: '#72B01D ', fontSize: 25 }}
-              >
-                &lt;SoftwareEngineers&#47;&gt;
-              </pre>
+            <span
+              style={{ fontStyle: 'italic', fontWeight: 'bold', fontSize: 34 }}
+            >
+              Empowering Small Businesses with Stunning Websites
             </span>
             <br />
             <br />
@@ -36,10 +33,23 @@ const Personal = ({ isMobile }) => {
           </p>
           <p className='about_text mb-10 mt-10'>
             <span style={{ fontSize: 28, fontWeight: 'bold' }}>
-              Contact us below
+              - Free Consultation -
             </span>{' '}
+            <img
+              src={consultation}
+              alt='Free Consultation'
+              style={{
+                width: 'auto',
+                maxHeight: 350,
+                borderRadius: 5,
+                border: '2px solid #72b01d',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                boxShadow: '3px 5px 10px rgb(115, 108, 100)',
+              }}
+            />
             <br />
-            to get started in the right direction!
+            Contact us below to get started in the right direction!
           </p>
         </div>
       </div>

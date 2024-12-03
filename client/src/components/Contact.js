@@ -1,5 +1,4 @@
 import { useForm } from '@formspree/react'
-import { Icon } from '@iconify/react'
 import { MDBCard, MDBCardBody } from 'mdb-react-ui-kit'
 import React from 'react'
 import { Button, FloatingLabel, Form } from 'react-bootstrap'
@@ -18,7 +17,7 @@ const Contact = () => {
   return (
     <div className='no-underline text-black visited:text-black hover:text-black container mb-20 '>
       <MDBCard className='contact_MDBCard animate__animated animate__fadeInLeft'>
-        <MDBCardBody className='contact_form text-[#72B01D]'>
+        <MDBCardBody className='contact_form text-[#0d0a0b]'>
           <Form onSubmit={handleSubmit}>
             <FloatingLabel label='Name:'>
               <input

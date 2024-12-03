@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react'
 import {
   MDBContainer,
   MDBNavbar,
@@ -8,6 +7,7 @@ import {
 } from 'mdb-react-ui-kit'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import logo from '../images/logot.png'
 
 export default function App({ isMobile }) {
   return (
@@ -16,13 +16,12 @@ export default function App({ isMobile }) {
       style={{
         borderBottom: '1px solid #72B01D',
         display: 'fixed',
-        background: 'black',
-        opacity: '80%',
+        background: 'rgb(0, 0, 0, 0.8)',
       }}
     >
       <MDBContainer fluid>
         <MDBNavbarNav
-          className='text-lg flex text-offwhite flex-row justify-center '
+          className='text-lg flex text-white flex-row justify-center '
           style={{ width: '100%', alignItems: 'center' }}
         >
           <Link to='/' style={{ marginRight: 'auto' }} className='link-hover'>
@@ -32,7 +31,17 @@ export default function App({ isMobile }) {
                 margin: isMobile ? 5 : 15,
               }}
             >
-              Claxton Software
+              <img
+                src={logo}
+                alt='Claxton Software logo'
+                style={{
+                  height: isMobile ? 75 : 100,
+                  display: 'inline',
+                  marginTop: -20,
+                  marginBottom: -20,
+                }}
+              />{' '}
+              {!isMobile ? 'Claxton Software' : ''}
             </p>
           </Link>
           <MDBNavbarItem>
