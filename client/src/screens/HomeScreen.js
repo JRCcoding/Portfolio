@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react'
 import React from 'react'
 import Contact from '../components/Contact'
-import Personal from '../components/Personal'
+import Personal from '../components/Hero'
 import ScrollButton from '../components/ScrollButton'
 const HomeScreen = ({ isMobile }) => {
   return (

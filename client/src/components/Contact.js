@@ -16,7 +16,10 @@ const Contact = () => {
   }
   return (
     <div className='no-underline text-black visited:text-black hover:text-black container mb-20 '>
-      <MDBCard className='contact_MDBCard animate__animated animate__fadeInLeft'>
+      <MDBCard
+        className='contact_MDBCard animate__animated animate__fadeInLeft'
+        id='contact'
+      >
         <MDBCardBody className='contact_form text-[#0d0a0b]'>
           <Form onSubmit={handleSubmit}>
             <FloatingLabel label='Name:'>
