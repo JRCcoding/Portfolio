@@ -39,7 +39,7 @@ const Personal = ({ isMobile }) => {
   const scrollLeft = () => {
     if (imageContainerRef.current) {
       imageContainerRef.current.scrollTo({
-        left: imageContainerRef.current.scrollLeft - 300, // Adjust scroll amount as needed
+        left: imageContainerRef.current.scrollLeft - 350, // Adjust scroll amount as needed
         behavior: 'smooth',
       })
     }
@@ -48,7 +48,7 @@ const Personal = ({ isMobile }) => {
   const scrollRight = () => {
     if (imageContainerRef.current) {
       imageContainerRef.current.scrollTo({
-        left: imageContainerRef.current.scrollLeft + 300, // Adjust scroll amount as needed
+        left: imageContainerRef.current.scrollLeft + 350, // Adjust scroll amount as needed
         behavior: 'smooth',
       })
     }
