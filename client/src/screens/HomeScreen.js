@@ -1,17 +1,29 @@
 import { Icon } from '@iconify/react'
 import React from 'react'
 import Contact from '../components/Contact'
-import Personal from '../components/Hero'
+import Hero from '../components/Hero'
 import ScrollButton from '../components/ScrollButton'
+import logo from '../images/logot.png'
 const HomeScreen = ({ isMobile }) => {
   return (
     <div className='min-h-screen'>
-      <Icon
+      {/* <Icon
         icon='bx:code-alt'
         className='content-centet  w-20 h-20 mx-auto mt-40 ml-0'
         id='home'
+      />{' '} */}
+      <img
+        src={logo}
+        alt='Claxton Software logo'
+        style={{
+          height: 250,
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          marginTop: 140,
+          marginBottom: -100,
+        }}
       />{' '}
-      <Personal style={{ marginBottom: '-50%' }} isMobile={isMobile} />
+      <Hero isMobile={isMobile} />
       <Icon
         icon='bx:code-alt'
         className='content-center text-white w-20 h-20 mx-auto'

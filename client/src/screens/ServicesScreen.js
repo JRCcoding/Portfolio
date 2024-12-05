@@ -3,11 +3,6 @@ import 'animate.css'
 import React, { useState } from 'react'
 import { skills } from '../data'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import kk_ss from '../images/kk_ss.png'
-import lnc_ss from '../images/lnc_ss_2.png'
-import nolimit_ss from '../images/nolimit_ss.png'
-import poke_ss from '../images/poke_ss.png'
-import swapi_ss from '../images/swapi_ss.png'
 import '../styles/Work.css'
 import ScrollButton from '../components/ScrollButton'
 import Contact from '../components/Contact'
@@ -18,6 +13,7 @@ import ps from '../images/ps.jpg'
 import bcs from '../images/bcs.webp'
 import im from '../images/im.png'
 import ae from '../images/ae.webp'
+import logo from '../images/logot.png'
 
 const Skills = () => {
   const [hidden, setHidden] = useState(true)
@@ -72,10 +68,16 @@ const Skills = () => {
   return (
     <div className='min-h-screen'>
       <Container>
-        <Icon
-          icon='bx:code-alt'
-          className='content-centet  w-20 h-20 mx-auto mt-40 ml-0'
-          id='home'
+        <img
+          src={logo}
+          alt='Claxton Software logo'
+          style={{
+            height: 250,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginTop: 100,
+            marginBottom: 0,
+          }}
         />{' '}
         <div>
           <div
@@ -134,13 +136,13 @@ const Skills = () => {
           </div>
         </div>
       </Container>
-      <Icon
+      {/*<Icon
         icon='bx:code-alt'
         className='content-center  w-20 h-20 mx-auto mt-40 ml-0'
         id='skills'
       />{' '}
       <h1 className='text-center text-3xl mb-20 '>Features</h1>
-      <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-80'>
+       <div className='flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-80'>
         {skills.map((skill) => (
           <div key={skill} className='p-2 sm:w-full lg:w-1/2'>
             <div
@@ -157,7 +159,6 @@ const Skills = () => {
               <div className='mt-2 border bg-black rounded p-4 animate__animated animate__fadeInUp'>
                 <h3>{skillDetails[skill].title}</h3>
                 <p>{skillDetails[skill].description}</p>
-                {/* You can add an image here if needed */}
                 {skillDetails[skill].image && (
                   <img src={skillDetails[skill].image} alt={skill} />
                 )}
@@ -165,7 +166,7 @@ const Skills = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
       {/* <section className='mb-80'>
         <Icon
           icon='bx:code-alt'

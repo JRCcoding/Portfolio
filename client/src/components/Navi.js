@@ -31,17 +31,7 @@ export default function App({ isMobile }) {
                 margin: isMobile ? 5 : 15,
               }}
             >
-              <img
-                src={logo}
-                alt='Claxton Software logo'
-                style={{
-                  height: isMobile ? 75 : 100,
-                  display: 'inline',
-                  marginTop: -20,
-                  marginBottom: -20,
-                }}
-              />{' '}
-              {!isMobile ? 'Claxton Software' : ''}
+              Claxton Software
             </p>
           </Link>
           <MDBNavbarItem>

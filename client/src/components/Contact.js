@@ -15,7 +15,10 @@ const Contact = () => {
     )
   }
   return (
-    <div className='no-underline text-black visited:text-black hover:text-black container mb-20 '>
+    <div
+      className='no-underline text-black visited:text-black hover:text-black container '
+      style={{ marginBottom: 350 }}
+    >
       <MDBCard
         className='contact_MDBCard animate__animated animate__fadeInLeft'
         id='contact'
