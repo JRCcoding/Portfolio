@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bc77acd7.css",
-    "main.js": "/static/js/main.37c2f309.js",
+    "main.js": "/static/js/main.e352efac.js",
     "static/media/consultation.jpg": "/static/media/consultation.8aa5ddd2536852528220.jpg",
     "static/media/lnc_ss_2.png": "/static/media/lnc_ss_2.cee20a8a92bdb3179090.png",
     "static/media/nolimit.png": "/static/media/nolimit.c73d82fc08eabefea54b.png",
@@ -15,10 +15,10 @@
     "static/media/ps.jpg": "/static/media/ps.540770957b01228ba232.jpg",
     "index.html": "/index.html",
     "main.bc77acd7.css.map": "/static/css/main.bc77acd7.css.map",
-    "main.37c2f309.js.map": "/static/js/main.37c2f309.js.map"
+    "main.e352efac.js.map": "/static/js/main.e352efac.js.map"
   },
   "entrypoints": [
     "static/css/main.bc77acd7.css",
-    "static/js/main.37c2f309.js"
+    "static/js/main.e352efac.js"
   ]
 }
