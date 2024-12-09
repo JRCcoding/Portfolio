@@ -12,7 +12,7 @@ const HomeScreen = ({ isMobile }) => {
         className='content-centet  w-20 h-20 mx-auto mt-40 ml-0'
         id='home'
       />{' '} */}
-      <img
+      {/* <img
         src={logo}
         alt='Claxton Software logo'
         style={{
@@ -22,7 +22,7 @@ const HomeScreen = ({ isMobile }) => {
           marginTop: 140,
           marginBottom: -100,
         }}
-      />{' '}
+      />{' '} */}
       <Hero isMobile={isMobile} />
       <Icon
         icon='bx:code-alt'

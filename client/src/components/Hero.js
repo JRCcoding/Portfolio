@@ -85,6 +85,25 @@ const Personal = ({ isMobile }) => {
           >
             Transform your online presence and attract more customers.
           </p>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              marginTop: 40,
+              marginBottom: 10,
+            }}
+          >
+            <iframe
+              width='560'
+              height='315'
+              src='https://www.youtube.com/embed/X8ADGaOIQqw?si=CBdMkZlGoX3ML8Ts'
+              title='YouTube video player'
+              frameborder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+              referrerpolicy='strict-origin-when-cross-origin'
+              allowfullscreen
+            ></iframe>
+          </div>
           <p className='about_text' style={{ fontSize: 22, marginBottom: 75 }}>
             We create websites that not only look amazing but also drive sales,
             generate leads, and help you achieve your business goals.
