@@ -72,3 +72,7 @@ h1 {
   transition: all !important;
   animation-duration: 2s !important;
 }
+
+.fixed-top {
+  backdrop-filter: blur(10px);
+}

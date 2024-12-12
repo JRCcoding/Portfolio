@@ -12,10 +12,10 @@
   margin-right: auto;
 }
 .contact_submit {
-  color: #007bff;
+  color: #58b85d;
 }
 .contact_submit {
-  background-color: #007bff !important;
+  background-color: #58b85d !important;
   color: white;
   border-radius: 15px;
   margin-top: 5%;
@@ -30,11 +30,11 @@
 }
 .contact_submit {
   color: #f3eff5;
-  background-color: #72b01d !important;
+  background-color: #58b85d !important;
   border: none;
 }
 .contact_submit:hover {
-  background-color: #72b01d !important;
+  background-color: #58b85d !important;
   box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 600px) {

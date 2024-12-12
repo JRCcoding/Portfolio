@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Image } from 'react-bootstrap'
 import consultation from '../images/consultation.jpg'
 import lnc from '../images/lnc_ss_2.png'
 import kaitlyn from '../images/kk_ss.png'
@@ -60,11 +60,18 @@ const Personal = ({ isMobile }) => {
         <div
           className='flex flex-column mt-40 animate__animated animate__fadeInLeft'
           style={{
-            marginBottom: '15%',
+            marginBottom: 100,
             textAlign: 'center',
             color: '#F3EFF5',
           }}
         >
+          <Image
+            src='/images/logo.png'
+            height={250}
+            width={250}
+            alt='Claxton Software Logo'
+            style={{ marginLeft: 'auto', marginRight: 'auto' }}
+          />
           <span
             style={{
               fontStyle: 'italic',
@@ -80,7 +87,7 @@ const Personal = ({ isMobile }) => {
               marginLeft: 35,
               marginRight: 35,
               fontSize: 26,
-              marginBottom: 15,
+              marginBottom: 155,
             }}
           >
             Transform your online presence and attract more customers.
@@ -93,7 +100,7 @@ const Personal = ({ isMobile }) => {
               marginBottom: 10,
             }}
           >
-            <iframe
+            {/* <iframe
               width='560'
               height='315'
               src='https://www.youtube.com/embed/X8ADGaOIQqw?si=CBdMkZlGoX3ML8Ts'
@@ -102,9 +109,9 @@ const Personal = ({ isMobile }) => {
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
               referrerpolicy='strict-origin-when-cross-origin'
               allowfullscreen
-            ></iframe>
+            ></iframe> */}
           </div>
-          <p className='about_text' style={{ fontSize: 22, marginBottom: 75 }}>
+          <p className='about_text' style={{ fontSize: 16, marginBottom: 5 }}>
             We create websites that not only look amazing but also drive sales,
             generate leads, and help you achieve your business goals.
           </p>
@@ -120,7 +127,7 @@ const Personal = ({ isMobile }) => {
                   zIndex: 1,
                 }}
               >
-                <FaArrowCircleLeft style={{ color: 'gray', fontSize: 30 }} />
+                <FaArrowCircleLeft style={{ color: '#58B85D', fontSize: 30 }} />
               </button>
             )}
             <div
@@ -165,14 +172,16 @@ const Personal = ({ isMobile }) => {
                   zIndex: 1, // Ensure it's above the images
                 }}
               >
-                <FaArrowCircleRight style={{ color: 'gray', fontSize: 30 }} />
+                <FaArrowCircleRight
+                  style={{ color: '#58B85D', fontSize: 30 }}
+                />
               </button>
             )}
           </div>
           <a href='#consultation'>
             <FaArrowCircleDown
               style={{
-                color: '#72b01d',
+                color: '#58B85D',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 fontSize: 50,
@@ -195,7 +204,7 @@ const Personal = ({ isMobile }) => {
                 width: 'auto',
                 maxHeight: 350,
                 borderRadius: 5,
-                border: '2px solid #72b01d',
+                border: '2px solid #58B85D',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 boxShadow: '3px 5px 10px rgb(115, 108, 100)',
@@ -207,7 +216,7 @@ const Personal = ({ isMobile }) => {
           <a href='#contact'>
             <FaArrowCircleDown
               style={{
-                color: '#72b01d',
+                color: '#58B85D',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 fontSize: 50,

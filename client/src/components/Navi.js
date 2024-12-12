@@ -7,7 +7,6 @@ import {
 } from 'mdb-react-ui-kit'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../images/logot.png'
 
 export default function App({ isMobile }) {
   return (
@@ -16,7 +15,7 @@ export default function App({ isMobile }) {
       style={{
         borderBottom: '1px solid #72B01D',
         display: 'fixed',
-        background: 'rgb(0, 0, 0, 0.8)',
+        backgroundColor: 'rgb(56,48,46,0.8)',
       }}
     >
       <MDBContainer fluid>

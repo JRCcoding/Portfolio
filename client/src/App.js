@@ -34,7 +34,7 @@ function App() {
     <Router>
       <div
         className='App text-offwhite overflow-hidden'
-        style={{ background: '#0D0A0B' }}
+        style={{ background: '#2E3638' }}
       >
         <Navi isMobile={isMobile} />
 

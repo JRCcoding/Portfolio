@@ -13,7 +13,6 @@ import ps from '../images/ps.jpg'
 import bcs from '../images/bcs.webp'
 import im from '../images/im.png'
 import ae from '../images/ae.webp'
-import logo from '../images/logot.png'
 
 const Skills = () => {
   const [hidden, setHidden] = useState(true)
@@ -68,18 +67,18 @@ const Skills = () => {
   return (
     <div className='min-h-screen'>
       <Container>
-        <img
-          src={logo}
-          alt='Claxton Software logo'
-          style={{
-            height: 250,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: 100,
-            marginBottom: 0,
-          }}
-        />{' '}
-        <div>
+        <div className='animate__animated animate__fadeInLeft'>
+          <img
+            src='/images/logo.png'
+            alt='Claxton Software logo'
+            style={{
+              height: 250,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginTop: '17%',
+              marginBottom: 0,
+            }}
+          />
           <div
             className='flex flex-column mt-40'
             style={{ marginBottom: '15%' }}
